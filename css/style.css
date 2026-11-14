@@ -1,0 +1,131 @@
+/* 1. Agregar dentro de :root */
+:root {
+    --color-primario-hover: hsl(217, 91%, 45%);
+    --color-secundario-hover: hsl(220, 20%, 94%);
+    --color-accion-peligro-hover: hsl(0, 84%, 38%);
+    --radio-recto: 0rem;
+}
+
+/* 2. Agregar en Generales (junto a body) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+/* 3. Agregar en Tipografía */
+.texto-marca {
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-bold);
+    color: var(--color-titulo);
+}
+
+/* 4. Agregar en Flex (.fila-flexible con gap) y Botones */
+.fila-flexible {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-primario,
+.btn-secundario,
+.btn-peligro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1rem;
+    border-radius: var(--radio-boton);
+    border: 1px solid transparent;
+    font-size: var(--letra-boton);
+    font-weight: var(--peso-semi);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-texto-boton);
+}
+
+.btn-secundario {
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-principal-letra);
+    border-color: var(--color-borde);
+}
+
+.btn-peligro {
+    background-color: var(--color-accion-peligro);
+    color: var(--color-texto-boton);
+}
+
+.btn-primario:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-secundario-hover);
+}
+
+.btn-peligro:hover {
+    background-color: var(--color-accion-peligro-hover);
+}
+
+.btn-primario:active,
+.btn-secundario:active,
+.btn-peligro:active {
+    transform: translateY(1px);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+/* 5. Header y Barra de Navegación Vertical */
+header {
+    background-color: var(--color-fondo-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-recto);
+    padding: 1.5rem;
+}
+
+.aside-vertical {
+    display: grid;
+    background-color: var(--color-fondo-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-recto);
+    padding: 1.5rem;
+}
+
+.aside-vertical ul {
+    list-style: none;
+    padding: 0;
+    gap: 0.25rem;
+}
+
+.aside-vertical a {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: var(--radio-boton);
+    text-decoration: none;
+    color: var(--color-principal-letra);
+}
+
+.aside-vertical a:hover {
+    background-color: var(--color-fondo-principal);
+    text-decoration: none;
+}
+
+.aside-vertical a[aria-current="page"] {
+    background-color: var(--color-fondo-activo);
+    color: var(--color-primario);
+    font-weight: var(--peso-semi);
+}
