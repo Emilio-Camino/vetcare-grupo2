@@ -4,6 +4,11 @@
     --color-secundario-hover: hsl(220, 20%, 94%);
     --color-accion-peligro-hover: hsl(0, 84%, 38%);
     --radio-recto: 0rem;
+    --color-borde-tabla: hsl(0, 0%, 85%);
+    --color-seccion-tabla-par: hsl(210, 40%, 98%);
+    --color-seccion-tabla-hover: hsl(210, 40%, 96%);
+    --padding-tabla: 1rem 0rem 1rem 0rem;
+    --borde-inferior-tabla: 1px solid var(--color-borde);
 }
 
 /* 2. Agregar en Generales (junto a body) */
@@ -260,4 +265,67 @@ textarea:invalid:not(:placeholder-shown) {
         display: inline-block; /* Mantiene uno a lado de otro y se puede aplicar bien padding*/
         padding: 0.25rem 0;
     }
+
+    /* 2. Tablas */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: justify;
+    }
+
+    caption {
+        text-align: justify;
+        color: var(--color-texto-secundario);
+        font-weight: var(--peso-normal);
+        padding-bottom: 0.01rem;
+    }
+
+    thead th {
+        padding: var(--padding-tabla);
+        text-transform: uppercase;
+        border-bottom: var(--borde-inferior-tabla);
+        font-weight: var(--peso-semi);
+    }
+
+    tbody td {
+        padding: var(--padding-tabla);
+        font-weight: var(--peso-normal);
+        border-bottom: var(--borde-inferior-tabla);
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: var(--color-seccion-tabla-par);
+    }
+
+    tbody tr:hover {
+        background-color: var(--color-seccion-tabla-hover);
+    }
+
+    /* 3. Estados (Badges: Programada, Atendida, Cancelada) */
+    .estado {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        font-size: var(--letra-pequena);
+        font-weight: var(--peso-semi);
+    }
+
+    .estado-pendiente {
+        background-color: var(--color-estado-pendiente-bg);
+        color: var(--color-estado-pendiente-texto);
+    }
+
+    .estado-atendida {
+        background-color: var(--color-estado-completado-bg);
+        color: var(--color-estado-completado-texto);
+    }
+
+    .estado-cancelada {
+        background-color: var(--color-estado-cancelado-bg);
+        color: var(--color-estado-cancelado-texto);
+    }
+
 }
+
+
+
