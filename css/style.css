@@ -1,0 +1,206 @@
+:root {
+    /* Fondos y bordes */
+    --color-fondo-principal: hsl(220, 20%, 97%);
+    --color-fondo-secundario: hsl(0, 0%, 100%);
+    --color-fondo-activo: hsl(214, 95%, 95%);
+    --color-borde: hsl(220, 13%, 91%);
+
+    /* Textos */
+    --color-titulo: hsl(222, 47%, 11%);
+    --color-principal-letra: hsl(215, 16%, 35%);
+    --color-texto-secundario: hsl(215, 16%, 55%);
+    --color-texto-boton: hsl(0, 0%, 100%);
+
+    /* Marca, botones y enlaces */
+    --color-primario: hsl(217, 91%, 53%);
+    --color-enlaces: hsl(217, 91%, 48%);
+    --color-accion-peligro: hsl(0, 84%, 45%);
+
+    /* Estados (Badges) */
+    --color-estado-pendiente-bg: hsl(48, 96%, 89%);
+    --color-estado-pendiente-texto: hsl(32, 95%, 35%);
+    --color-estado-completado-bg: hsl(142, 76%, 90%);
+    --color-estado-completado-texto: hsl(142, 76%, 30%);
+    --color-estado-cancelado-bg: hsl(0, 93%, 94%);
+    --color-estado-cancelado-texto: hsl(0, 74%, 42%);
+
+    /* Tipografía */
+    --fuente-principal: system-ui, -apple-system, sans-serif;
+    --letra-titulo: 1.5rem;
+    --letra-subtitulo: 0.95rem;
+    --letra-base: 0.875rem;
+    --letra-boton: 0.85rem;
+    --letra-pequena: 0.75rem;
+
+    --peso-normal: 400;
+    --peso-medio: 500;
+    --peso-semi: 600;
+    --peso-bold: 700;
+
+    /* Layout y bordes */
+    --radio-contenedor: 0.6rem;
+    --radio-boton: 0.3rem;
+}
+
+/* Generales */
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-principal);
+    color: var(--color-principal-letra);
+    font-size: var(--letra-base);
+}
+
+/* Tipografia */
+
+.texto-titulo {
+    font-size: var(--letra-titulo);
+    font-weight: var(--peso-bold);
+    color: var(--color-titulo);
+}
+
+.texto-subtitulo {
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-normal);
+    color: var(--color-texto-secundario);
+}
+
+.texto-parrafo {
+    font-size: var(--letra-base);
+    font-weight: var(--peso-normal);
+    color: var(--color-principal-letra);
+}
+
+.texto-etiqueta {
+    font-size: var(--letra-pequena);
+    font-weight: var(--peso-semi);
+    color: var(--color-texto-secundario);
+}
+
+/* Flex */
+.contenedor-tarjeta {
+    background-color: var(--color-fondo-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-contenedor);
+    padding: 1.5rem;
+}
+
+.fila-flexible {
+    display: flex; /* Coloca los elementos hijos uno al lado del otro */
+    align-items: center; /* Centra los elementos verticalmente en la fila */
+}
+
+.fila-espaciada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Empuja el primer elemento a la izquierda y el último a la derecha */
+}
+
+.columna-flexible {
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno debajo del otro */
+}
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-texto-boton);
+}
+
+.btn-secundario {
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-principal-letra);
+    border-color: var(--color-borde);
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-fondo-principal);
+}
+
+.enlace {
+    font-size: var(--letra-base);
+    font-weight: var(--peso-medio);
+    color: var(--color-enlaces);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.enlace:hover {
+    text-decoration: underline;
+}
+
+.enlace-peligro {
+    font-size: var(--letra-base);
+    font-weight: var(--peso-medio);
+    color: var(--color-accion-peligro);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.enlace-peligro:hover {
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .contenedor-tarjeta {
+        padding: 1.25rem;
+    }
+
+    .texto-titulo {
+        font-size: 1.35rem;
+    }
+
+    .fila-flexible {
+        flex-wrap: wrap; /* Permite que los elementos bajen a otra línea si no caben */
+    }
+
+    .fila-espaciada {
+        flex-wrap: wrap;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    .contenedor-tarjeta {
+        padding: 1rem;
+        border-radius: 0.45rem;
+    }
+
+    .texto-titulo {
+        font-size: 1.2rem;
+    }
+
+    .texto-subtitulo {
+        font-size: 0.875rem;
+    }
+
+    .fila-espaciada {
+        flex-direction: column; /* Cambia de fila horizontal a columna vertical */
+        align-items: stretch; /* Estira los hijos para que ocupen todo el ancho */
+    }
+
+    .fila-flexible {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        width: 100%;
+        padding: 0.65rem 1rem;
+        text-align: center;
+    }
+
+    .enlace,
+    .enlace-peligro {
+        display: inline-block; /* Mantiene uno a lado de otro y se puede aplicar bien padding*/
+        padding: 0.25rem 0;
+    }
+}
