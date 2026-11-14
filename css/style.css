@@ -164,6 +164,7 @@ textarea {
 }
 
 textarea {
+    max-height: 30rem;
     resize: vertical;
 }
 
@@ -228,6 +229,28 @@ textarea:invalid:not(:placeholder-shown) {
     background: rgba(15, 23, 42, 0.45);
 }
 
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-6  { grid-column: span 6; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-12 { grid-column: span 12; }
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
 /* Tablet */
 @media (max-width: 1024px) {
     .contenedor-tarjeta {
@@ -245,6 +268,8 @@ textarea:invalid:not(:placeholder-shown) {
     .fila-espaciada {
         flex-wrap: wrap;
     }
+    .col-2  { grid-column: span 3; }
+    .col-10 { grid-column: span 9; }
 }
 
 /* Celular */
@@ -348,7 +373,10 @@ textarea:invalid:not(:placeholder-shown) {
         background-color: var(--color-estado-cancelado-bg);
         color: var(--color-estado-cancelado-texto);
     }
-
+    
+    .col-1, .col-2, .col-3, .col-4, .col-6, .col-8, .col-9, .col-10 {
+        grid-column: 1 / -1;
+    }
 }
 
 
