@@ -236,11 +236,12 @@ header {
 /* Barra de Navegacion Vertical */
 
 .aside-vertical{
-    display: grid;
+    align-content:flex-start;
     background-color: var(--color-fondo-secundario);
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-recto);
     padding: 1.5rem;
+    border-top: none;
 }
 
 .aside-vertical p{
@@ -423,7 +424,8 @@ textarea {
 .rejilla {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1rem;
+    min-height: calc(100vh - 70px); /* Ocupa todo el alto restante de la pantalla */
+    gap: 0;
 }
 
 .col-1  { grid-column: span 1; }
