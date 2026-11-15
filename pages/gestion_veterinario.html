@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Veterinario</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="fila-espaciada">
@@ -22,11 +22,80 @@
             <p>Administracion</p>
             <ul>
                 <li><a href="gestion_veterinario.html" aria-current="page">Veterinarios</a></li>
-                <li><a href="gestion_cita.html">Servicios</a></li></a></li>
+                <li><a href="gestion_cita.html">Servicios</a></li>
             </ul>
         </aside>
-        <main>
+        <main class="col-10">
             <h1 class="texto-marca">Veterinarios</h1>
+            <div class="fila-espaciada">
+                <p>Gestion del personal veterinario de la clinica</p>
+                <button class="btn-primario">+ Nuevo Veterinario</button>
+            </div>
+            
+            <div class="contenedor-tarjeta">
+                <form class="fila-flexible">
+                    <input type="text" placeholder="Buscar por nombre o especialidad">
+                    <button type="submit" class="btn-secundario">Buscar</button>
+            
+                </form>
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Personal veterinario registrado</caption>
+                        <thead>
+                            <tr>
+                                <th>Cedula</th>
+                                <th>Nombres y apellidos</th>
+                                <th>Especialidad</th>
+                                <th>Celular</th>
+                                <th>Correo electronico</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1710223344</td>
+                                <td>Dra. Valeria Gómez</td>
+                                <td>Medicina general</td>
+                                <td>0994455667</td>
+                                <td>valeria.gomez@huellitas.ec</td>
+                                <td><span class="estado estado-atendida">Disponible</span></td>
+                                <td class="fila-flexible">
+                                    <a href="#" class="enlace">Editar</a>
+                                    <a href="#" class="enlace-peligro">Eliminar</a>
+                                </td>
+                            </tr>
+                            </tr> 
+                            <tr>
+                                <td>1718877665</td>
+                                <td>Dr. Mateo Ríos</td>
+                                <td>Cirugía</td>
+                                <td>0983322110</td>
+                                <td>mateo.rios@huellitas.ec</td>
+                                <td><span class="estado estado-atendida">Disponible</span></td>
+                                <td class="fila-flexible">
+                                    <a href="#" class="enlace">Editar</a>
+                                    <a href="#" class="enlace-peligro">Eliminar</a>
+                                </td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td>1724455661</td>
+                                <td>Dra. Sofía Andrade</td>
+                                <td>Dermatología</td>
+                                <td>0997766554</td>
+                                <td>sofia.andrade@huellitas.ec</td>
+                                <td><span class="estado estado-atendida">Disponible</span></td>
+                                <td class="fila-flexible">
+                                    <a href="#" class="enlace">Editar</a>
+                                    <a href="#" class="enlace-peligro">Eliminar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </main>
     </div>
 </body>
