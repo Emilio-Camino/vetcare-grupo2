@@ -63,6 +63,9 @@ body {
     background-color: var(--color-fondo-principal);
     color: var(--color-principal-letra);
     font-size: var(--letra-base);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main{
@@ -241,7 +244,7 @@ header {
 .aside-vertical{
     align-content:flex-start;
     background-color: var(--color-fondo-secundario);
-    border: 1px solid var(--color-borde);
+    border-right: 1px solid var(--color-borde);
     border-radius: var(--radio-recto);
     padding: 1.5rem;
     border-top: none;
@@ -277,8 +280,17 @@ header {
     font-weight: var(--peso-semi);
 }
 
-
+/*Footer*/
+footer {
+    background-color: var(--color-fondo-secundario);
+    border-top: 1px solid var(--color-borde);
+    padding: 1rem 1.5rem;
+}
 /*Formularios*/
+
+form{
+    padding-bottom: 0.75rem;
+}
 
 fieldset {
     border: none;
@@ -343,6 +355,11 @@ textarea:user-invalid,
 input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
     border-color: var(--color-accion-peligro);
+}
+
+/*Para espaciar elementos horizontales en los formularios*/
+form .fila-flexible > .columna-flexible {
+    flex: 1;
 }
 
 /* Tablas */
@@ -428,8 +445,8 @@ textarea {
 .rejilla {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    min-height: calc(100vh - 70px); /* Ocupa todo el alto restante de la pantalla */
     gap: 0;
+    flex: 1;
 }
 
 .col-1  { grid-column: span 1; }
