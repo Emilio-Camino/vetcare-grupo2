@@ -437,7 +437,7 @@ tbody tr:hover{
 }
 
 textarea {
-    max-height: 30rem;
+    max-height: 5.5rem;
     resize: vertical; /*Evita que  expanadan el textarea hacia los lados en el popover*/
     margin-bottom: 1rem;
 }

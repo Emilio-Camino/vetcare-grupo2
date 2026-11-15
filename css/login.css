@@ -20,7 +20,7 @@ form{
 }
 
 body{
-    background-image: linear-gradient(hsla(0, 0%, 100%, 0.70), hsla(0, 0%, 100%, 0.70)), url("/img/fondo-login.jpg");
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0.70), hsla(0, 0%, 100%, 0.70)), url("../img/fondo-login.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
