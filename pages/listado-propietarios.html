@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,29 +13,31 @@
             <span class="texto-subtitulo">· Clínica Huellitas</span>
         </div>
         <div class="fila-flexible">
-            <span class="texto-parrafo">Administrador</span>
+            <span class="texto-parrafo">Recepcionista</span>
             <a class="enlace" href="index.html">Cerrar Sesion</a>
         </div>
     </header>
     <div class="rejilla">
         <aside class="col-2 aside-vertical">
             <p>Recepción</p>
-            <ul>
-                <li><a href="listado-citas.html">Citas</a></li>
-                <li><a href="listado-propietarios.html" aria-current="page">Propietarios</a></li>
-                <li><a href="listado-mascotas.html">Mascotas</a></li>
-            </ul>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="listado-citas.html">Citas</a></li>
+                    <li><a href="listado-propietarios.html" aria-current="page">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html">Mascotas</a></li>
+                </ul>
+            </nav>
         </aside>
         <main class= "col-10">
-            <h1 class="texto-marca">Propietarios</h1>
+            <h1 class="texto-titulo">Propietarios</h1>
             <div class="fila-espaciada">
-                <h2 class="texto-subtitulo">Registro y consulta de propietairos de mascotas</h2>
+                <h2 class="texto-subtitulo">Registro y consulta de propietarios de mascotas</h2>
                 <a class="btn-primario" href="registrar-propietario.html">+ Nuevo Propietario</a>
             </div>
             
             <section class="contenedor-tarjeta">
                 <form class="fila-flexible">
-                    <input type="search" placeholder="Buscar por nombre o numero de cédula">
+                    <input type="search" placeholder="Buscar por nombre o número de cédula">
                     <button type="submit" class="btn-secundario">Buscar</button>
                 </form>
                 <div class="tabla-responsive">
@@ -43,12 +45,12 @@
                         <caption>Listado de propietarios registrados en la clinica</caption>
                         <thead>
                             <tr>
-                                <th>Cedula</th>
-                                <th>Nombres y Apellidos</th>
-                                <th>Celular</th>
-                                <th>Correo Electrónico</th>
-                                <th>Mascotas</th>
-                                <th>Acciones</th>
+                                <th scope="col">Cedula</th>
+                                <th scope="col">Nombres y Apellidos</th>
+                                <th scope="col">Celular</th>
+                                <th scope="col">Correo Electrónico</th>
+                                <th scope="col">Mascotas</th>
+                                <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -101,15 +103,21 @@
                 </div>
             </section>
         </main>
-    </div>    
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--Tarjeta Popover-->    
     <div class="contenedor-tarjeta" id="eliminar-propietario" popover>
-        <h1 class="texto-titulo">¿Dar de baja al propietario?</h1>
+        <h2 class="texto-titulo">¿Dar de baja al propietario?</h2>
         <p class="texto-parrafo">Esta accion dará de baja al propietario</p>
         <p class="texto-parrafo">Ingrese el motivo para continuar</p>
         <form class="columna-flexible" method="get" action="#">
             <fieldset class="columna-flexible">
-            <legend class="texto-subtitulo">Motivo para dar de baja</legend>
-            <label class="texto-subtitulo" for="motivo-baja">Motivo*</label>
+            <legend>Motivo para dar de baja</legend>
+            <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
             <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
             </fieldset>
             <div class="fila-espaciada">
