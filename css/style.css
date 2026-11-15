@@ -109,6 +109,7 @@ main{
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-contenedor);
     padding: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .fila-flexible {
@@ -125,7 +126,8 @@ main{
 
 .columna-flexible {
     display: flex;
-    flex-direction: column; /* Apila los elementos uno debajo del otro */
+    flex-direction: column;
+    gap: 0.5rem; /* Apila los elementos uno debajo del otro */
 }
 
 /* Botones */

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <main class="rejilla col-10">
+        <section class="contenedor-login col-12">
+            <article class="contenedor-tarjeta tarjeta-login">
+                <header div class="columna-flexible">
+                    <h1 class="texto-titulo">VetCare - Clinica Huellitas</h1>
+                    <h2 class="texto-subtitulo">Acceso al sistema</h2>
+                </header>
+
+                <form class="columna-flexible" method="get">
+                    <fieldset>
+                        <legend>Credenciales de acceso</legend>
+                        <div class="columna-flexible">
+                            <label class="texto-etiqueta" for="correo">Correo electrónico</label>
+                            <input id="correo" name="correo" type="email" required autocomplete="email" placeholder="usuario@huellitas.ec">
+                        </div>
+
+                        <div class="columna-flexible">
+                            <label class="texto-etiqueta" for="contrasenia">Contraseña</label>
+                            <input id="contrasenia" name="contrasenia" type="password" required autocomplete="password" placeholder="Mín. 6 caracteres">
+                        </div>
+                    </fieldset>
+                        <div class="columna-flexible">
+                            <button type="submit" class="btn-primario" formaction="listado-citas.html">Acceder como Recepcionista</button>
+                            <button type="submit" class="btn-secundario" formaction="agenda-medica.html">Acceder como Veterinario</button>   
+                            <button type="submit" class="btn-secundario" formaction="gestion-veterinarios.html">Acceder como Administrador</button>
+                        </div>                    
+                </form>
+
+
+            </article>
+        </section>
+    </main>
+</body>
+</html>
