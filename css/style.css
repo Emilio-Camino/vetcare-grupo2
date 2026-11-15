@@ -48,8 +48,8 @@
     --radio-recto: 0rem;
     --radio-contenedor: 0.6rem;
     --radio-boton: 0.3rem;
-    --padding-tabla: 1rem 0rem 1rem 0rem;
-        --padding-tabla-responsive: 0 2rem;
+    --padding-tabla: 1rem 1rem 1rem 0rem;
+    --padding-tabla-responsive: 0 2rem 0 0rem;
     --borde-inferior-tabla: 1px solid var(--color-borde); 
 }
 
@@ -487,6 +487,7 @@ textarea {
     }
 
     tbody td {
+        text-align: left;
         padding: var(--padding-tabla);
         font-weight: var(--peso-normal);
         border-bottom: var(--borde-inferior-tabla);
@@ -572,11 +573,16 @@ textarea {
     }
 
     tbody td {
+        text-align: left;
         padding: var(--padding-tabla);
         font-weight: var(--peso-normal);
         border-bottom: var(--borde-inferior-tabla);
     }
-
+    td.fila-flexible{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
     tbody tr:nth-child(even) {
         background-color: var(--color-seccion-tabla-par);
     }
