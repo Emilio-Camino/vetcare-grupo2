@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Propietario</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Recepcionista</span>
+            <a class="enlace" href="index.html">Cerrar Sesion</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Recepción</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="listado-citas.html">Citas</a></li>
+                    <li><a href="listado-propietarios.html" aria-current="page">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html">Mascotas</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class= "col-10">
+            <div class="columna-flexible">
+                <a class="enlace" href="listado-propietarios.html">← Volver a propietarios</a>
+                <h1 class="texto-titulo">Editar Propietario</h1>
+                <section class="contenedor-tarjeta">
+                    <form id="registro-propietario" class="columna-flexible" method="get" action="listado-propietarios.html">
+                        <fieldset>
+                            <legend>Datos del propietario</legend>
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="cedula" class="texto-etiqueta">Cédula*</label>
+                                    <input id="cedula" name="cedula" type="text" required pattern="[0-9]{10}" maxlength="10" title="Debe contener exactamente 10 dígitos numéricos" placeholder="1712345678" value="1755745678" readonly>
+                                    <small>Exactamente 10 dígitos númericos, sin guión.</small>   
+                                </div>
+
+                                <div class="columna-flexible">
+                                    <label for="telefono-celular" class="texto-etiqueta">Teléfono Celular*</label>
+                                    <input id="telefono-celular" name="telefono-celular" type="tel" required pattern="09[0-9]{8}" maxlength="10" title="Debe tener 10 dígitos e iniciar con 09" placeholder="0991234567" value="0994567342">
+                                    <small>10 dígitos iniciando con 09.</small>
+                                </div>
+                            </div>
+                            
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="nombres" class="texto-etiqueta">Nombre*</label>
+                                    <input id="nombres" name="nombres" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Juan Carlos" value="Marco Alexander" readonly>
+                                    <small>Solo letras y espacios (2 a 50 caracteres).</small>   
+                                </div>
+
+                                <div class="columna-flexible">
+                                    <label for="apellidos" class="texto-etiqueta">Apellidos*</label>
+                                    <input id="apellidos" name="apellidos" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Suarez Flores" value="Rivas Casales" readonly>
+                                    <small>Solo letras y espacios (2 a 50 caracteres).</small>   
+                                </div>
+                            </div>
+                            
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="correo" class="texto-etiqueta">Correo Electrónico*</label>
+                                    <input id="correo" name="correo" type="email" required  placeholder="ejemplo@correo.com" value="marco.rivas@gmail.com">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="fila-flexible">
+                        <a class="btn-secundario" href="listado-propietarios.html">Cancelar</a>
+                        <button class="btn-primario" form="registro-propietario" type="submit">Guardar Cambios</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
