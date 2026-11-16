@@ -321,6 +321,7 @@ textarea {
 /*Aca le ponemos a radio y checkbox*/
 input[type="radio"],
 input[type="checkbox"] {
+    margin-top: 1rem;
     accent-color: var(--color-primario);
     cursor: pointer;
 }
@@ -565,7 +566,7 @@ textarea {
     .enlace,
     .enlace-peligro {
         display: inline-block; /* Mantiene uno a lado de otro y se puede aplicar bien padding*/
-        padding: 0.25rem 0;
+        padding: 0.45rem 0;
     }
 
     /* 2. Tablas */

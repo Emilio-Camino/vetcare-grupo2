@@ -23,7 +23,7 @@
             <nav aria-label="Menu Principal"></nav>
             <ul>
                 <li><a href="gestion-veterinario.html" aria-current="page">Veterinarios</a></li>
-                <li><a href="gestion-cita.html">Servicios</a></li>
+                <li><a href="catalogo-servicios.html">Servicios</a></li>
             </ul>
         </nav>
         </aside>
@@ -31,13 +31,13 @@
             <h1 class="texto-titulo">Veterinarios</h1>
             <div class="fila-espaciada">
                 <p>Gestion del personal veterinario de la clinica</p>
-                <button class="btn-primario">+ Nuevo Veterinario</button>
+                <a href="registrar-veterinario.html" class="btn-primario">+ Nuevo Veterinario</a>
             </div>
 
             <div class="contenedor-tarjeta">
                 <form class="fila-flexible">
                     <input type="text" placeholder="Buscar por nombre o especialidad">
-                    <button type="submit" class="btn-secundario">Buscar</button>
+                    <button type="submit"  class="btn-secundario">Buscar</button>
             
                 </form>
                 <div class="tabla-responsive">
@@ -63,8 +63,8 @@
                                 <td>valeria.gomez@huellitas.ec</td>
                                 <td><span class="estado estado-atendida">Disponible</span></td>
                                 <td class="fila-flexible">
-                                    <a href="#" class="enlace">Editar</a>
-                                    <a href="#" class="enlace-peligro">Eliminar</a>
+                                    <a href="editar-veterinario.html" class="enlace">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-veterinario">Eliminar</button>
                                 </td>
                             </tr>
                             </tr> 
@@ -76,8 +76,8 @@
                                 <td>mateo.rios@huellitas.ec</td>
                                 <td><span class="estado estado-atendida">Disponible</span></td>
                                 <td class="fila-flexible">
-                                    <a href="#" class="enlace">Editar</a>
-                                    <a href="#" class="enlace-peligro">Eliminar</a>
+                                    <a href="editar-veterinario.html" class="enlace">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-veterinario">Eliminar</button>
                                 </td>
                             </tr>
                             </tr>
@@ -89,8 +89,8 @@
                                 <td>sofia.andrade@huellitas.ec</td>
                                 <td><span class="estado estado-atendida">Disponible</span></td>
                                 <td class="fila-flexible">
-                                    <a href="#" class="enlace">Editar</a>
-                                    <a href="#" class="enlace-peligro">Eliminar</a>
+                                    <a href="editar-veterinario.html" class="enlace">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-veterinario">Eliminar</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -104,5 +104,23 @@
         <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
         <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
     </footer>
+    
+    <!--Tarjeta Popover-->    
+    <div class="contenedor-tarjeta" id="eliminar-veterinario" popover>
+        <h2 class="texto-titulo">¿Dar de baja al veterinario?</h2>
+        <p class="texto-parrafo">Esta accion dará de baja al veterinario</p>
+        <p class="texto-parrafo">Ingrese el motivo para continuar</p>
+        <form class="columna-flexible" method="get" action="#">
+            <fieldset class="columna-flexible">
+            <legend>Motivo para dar de baja</legend>
+            <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
+            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
+            </fieldset>
+            <div class="fila-espaciada">
+                <button type="button" class="btn-secundario" popovertarget="eliminar-veterinario" popovertargetaction="hide">No</button>
+                <button type="submit" class="btn-peligro"> Sí, dar de baja</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
