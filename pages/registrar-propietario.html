@@ -14,13 +14,13 @@
         </div>
         <div class="fila-flexible">
             <span class="texto-parrafo">Recepcionista</span>
-            <a class="enlace" href="../index.html">Cerrar Sesion</a>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
         </div>
     </header>
     <div class="rejilla">
         <aside class="col-2 aside-vertical">
             <p>Recepción</p>
-            <nav aria-label="Menu Principal">
+            <nav aria-label="Menú principal">
                 <ul>
                     <li><a href="listado-citas.html">Citas</a></li>
                     <li><a href="listado-propietarios.html" aria-current="page">Propietarios</a></li>
@@ -29,10 +29,10 @@
             </nav>
         </aside>
         <main class= "col-10">
-            <div class="columna-flexible">
+            <section class="columna-flexible">
                 <a class="enlace" href="listado-propietarios.html">← Volver a propietarios</a>
                 <h1 class="texto-titulo">Nuevo propietario</h1>
-                <section class="contenedor-tarjeta">
+                <article class="contenedor-tarjeta">
                     <form id="registro-propietario" class="columna-flexible" method="get" action="listado-propietarios.html">
                         <fieldset>
                             <legend>Datos del propietario</legend>
@@ -40,7 +40,7 @@
                                     <div class="columna-flexible">
                                         <label for="cedula" class="texto-etiqueta">Cédula*</label>
                                         <input id="cedula" name="cedula" type="text" required pattern="[0-9]{10}" maxlength="10" title="Debe contener exactamente 10 dígitos numéricos" placeholder="1712345678">
-                                        <small>Exactamente 10 dígitos númericos, sin guión.</small>   
+                                        <small>Exactamente 10 dígitos numéricos, sin guion.</small>   
                                     </div>
 
                                     <div class="columna-flexible">
@@ -76,8 +76,8 @@
                         <a class="btn-secundario" href="listado-propietarios.html">Cancelar</a>
                         <button class="btn-primario" form="registro-propietario" type="submit">Guardar</button>
                     </div>
-                </section>
-            </div>
+                </article>
+            </section>
         </main>
     </div>
     <footer class="fila-espaciada">
