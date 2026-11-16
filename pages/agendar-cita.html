@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+         <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas </span>
+        </div>
+
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Recepcionista</span>
+            <a class="enlace" href="../index.html">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Recepción</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="listado-citas.html" aria-current="page">Citas</a></li>
+                    <li><a href="listado-propietarios.html">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html">Mascotas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="col-10">
+           <div class="columna-flexible">
+            <a class="enlace" href="listado-citas.html">&larr; Volver a citas</a>
+            <h1 class="texto-titulo">Agendar cita</h1>
+           </div>
+
+           <section class="contenedor-tarjeta">
+                <form id="formulario-cita" class="columna-flexible" method="get" action="listado-citas.html">
+                    <fieldset>
+                        <legend>Paciente y Servicio</legend>
+
+                        <div class="fila-flexible">
+                            <div class="columna-flexible">
+                                <label for="propietario" class="texto-etiqueta">Propietario *</label>
+                                <select id="propietario" name="propietario" required>
+                                    <option value="" disabled selected>Selecciones un propietario</option>
+                                </select>
+                            </div>
+
+                            <div class="columna-flexible">
+                                <label for="mascota" class="texto-etiqueta">Mascota *</label>
+                                <select id="mascota" name="mascota" required>
+                                    <option value="" disabled selected>Selecciones una mascota </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="fila-flexible"> 
+                            <div class="columna-flexible">
+                                <label for="servicio" class="texto-etiqueta">Servicio *</label>
+                                <select id="servicio" name="servicio" required>
+                                    <option value="" disabled selected>Selecciones un servicio</option>
+                                </select>
+                            </div>
+
+                            <div class="columna-flexible">
+                                <label for="veterinario" class="texto-etiqueta">Veterinario *</label>
+                                <select id="veterinario" name="veterinario" required>
+                                    <option value="" disabled selected>Selecciones un veterinario</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <br></br>
+
+                        <legend>Fecha y horario</legend>
+
+                        <div class="fila-flexible">
+                            <div class="columna-flexible">
+                                <label for="fecha" class="texto-etiqueta">Fecha *</label>
+                                <input id="fecha" name="fecha" type="date" required min="2026-11-15">
+                                <small>Atención de lunes a sábado (no fechas pasadas).</small>
+                            </div>
+
+                            <div class="columna-flexible">
+                                <label for="hora" class="texto-etiqueta">Hora *</label>
+                                <input id="hora" name="hora" type="time" required min="08:00" max="18:00" step="1800" >
+                                <small>De 08:00 a 18:00 en bloques de 30 minutos.</small>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="fila-flexible" style="justify-content: flex-end;">
+                    <a class="btn-secundario" href="listado-citas.html">Cancelar</a>
+                    <button class="btn-primario" form="formulario-cita" type="submit">Agenda cita</button>
+                </div>
+           </section>
+        </main>
+    </div>
+
+    <footer class="fila-espaciada">
+    <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+    <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

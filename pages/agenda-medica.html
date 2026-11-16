@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda del dia</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas </span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Veterinario Dra.Valeria Gómez</span>
+            <a class="enlace" href="../index.html">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>atención médica</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="agenda-medica.html" aria-current="page">Agenda del día</a></li>
+                    <li><a href="historial-clinico.html">Historial Clínico</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="col-10">
+        <div class="fila-espaciada">
+            <div>
+                <h1 class="texto-titulo">Agenda del día</h1>
+                <h2 class="texto-subtitulo">Citas asignadas para atención médica</h2>
+            </div>
+
+            <form class="columna-flexible" method="get" action="agenda-medica.html">
+                <label for="fecha" class="texto-etiqueta">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" value="2026-11-11" required>
+                <div>
+                    <button type="submit" class="btn-secundario">Consultar</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="contenedor-tarjeta">
+            <div class="tabla-responsive">
+                <table>
+                    <caption>Agenda médica de Dra. Valeria Gómez</caption>
+                    <thead>
+                            <tr>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Mascota</th>
+                                <th scope="col">Especie</th>
+                                <th scope="col">Propietario</th>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--primera fila-->
+                            <tr>
+                                <td>09:00</td>
+                                <td>Toby</td>
+                                <td>Perro</td>
+                                <td>Carlos Mendoza</td>
+                                <td>consulta general</td>
+                                <td><span class="estado estado-pendiente">Programada</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="registrar-atencion-medica.html">Atender</a>
+                                    <a class="enlace" href="historial-clinico.html">Ver historial</a>
+                                </td>
+                            </tr>
+                            
+                            <!--segunda fila-->
+                            <tr>
+                                <td>10:00</td>
+                                <td>Luna</td>
+                                <td>Gato</td>
+                                <td>Ana Paredes</td>
+                                <td>Vacunación</td>
+                                <td><span class="estado estado-atendida">Atendida</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="historial-clinico.html">Ver historial</a>
+                                </td>
+                            </tr>
+
+                            <!--tercera fila-->
+                            <tr>
+                                <td>11:30</td>
+                                <td>Max</td>
+                                <td>Perro</td>
+                                <td>Robeto Gómez</td>
+                                <td>Desparasitación</td>
+                                <td><span class="estado estado-pendiente">Programada</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="registrar-atencion-medica.html">Atender</a>
+                                    <a class="enlace" href="historial-clinico.html">Ver historial</a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        
+    </main>
+    </div>
+
+    
+    
+
+    <footer class="fila-espaciada">
+         <p class="texto-parrafo">VetCare· Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
