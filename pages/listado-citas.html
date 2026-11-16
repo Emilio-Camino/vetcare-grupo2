@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de citas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada"> 
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas </span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Recepcionista</span>
+            <a class="enlace" href="../index.html">Cerrar Sesión</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Recepción</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="listado-citas.html" aria-current="page">Citas</a></li>
+                    <li><a href="listado-propietarios.html">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html">Mascotas</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="col-10">
+            <h1 class="texto-titulo">Citas</h1>
+            <div class="fila-espaciada">
+                <h2 class="texto-subtitulo">Agenda general de citas programada, atendidas y canceladas</h2>
+                <a class="btn-primario" href="agendar-cita.html">+ Agenda cita</a>
+            </div>
+
+            <section class="contenedor-tarjeta">
+                <form class="fila-flexible">
+                    <input type="search" placeholder="Buscar por mascota, propietario o veterinario..">
+                    <button type="submit" class="btn-secundario">Buscar</button>
+                </form>
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Listado de citas de la clínica</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Mascota</th>
+                                <th scope="col">Propietario</th>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">veterinario</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--primera fila-->
+                            <tr>
+                                <td>2026-11-12</td>
+                                <td>09:00</td>
+                                <td>Toby</td>
+                                <td>Carlos Mendoza</td>
+                                <td>consulta general</td>
+                                <td>Dra. Valeria Gómez</td>
+                                <td><span class="estado estado-pendiente">Programada</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="reprogramar-cita.html">Reprogramar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="cancelar-cita">Cancelar</button>
+                                </td>
+                            </tr>
+                            
+                            <!--segunda fila-->
+                            <tr>
+                                <td>2026-11-12</td>
+                                <td>09:30</td>
+                                <td>Luna</td>
+                                <td>Ana Paredes</td>
+                                <td>Vacunación</td>
+                                <td>Dr. Mateo Ríos</td>
+                                <td><span class="estado estado-atendida">Atendida</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="historial-clinico.html">Ver historial</a>
+                                </td>
+                            </tr>
+
+                            <!--tercera fila-->
+                            <tr>
+                                <td>2026-11-12</td>
+                                <td>10:30</td>
+                                <td>Max</td>
+                                <td>Robeto Gómez</td>
+                                <td>Desparasitación</td>
+                                <td>Dra. Sofía Andrade</td>
+                                <td><span class="estado estado-pendiente">Programada</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="reprogramar-cita.html">Reprogramar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="cancelar-cita">Cancelar</button>
+                                </td>
+                            </tr>
+
+                            <!--cuarta fila -->
+                             <tr>
+                                <td>2026-11-11</td>
+                                <td>15:00</td>
+                                <td>Misi</td>
+                                <td>Patricia Torres</td>
+                                <td>Baño medicado</td>
+                                <td>Dra. Valeria Gómez</td>
+                                <td><span class="estado estado-cancelada">Cancelada</span></td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="reprogramar-cita.html">Reprogramar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare· Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
