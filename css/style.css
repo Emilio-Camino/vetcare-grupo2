@@ -437,6 +437,10 @@ tbody tr:hover{
     background: rgba(15, 23, 42, 0.45); /*Oscurece el fondo de la pagina*/
 }
 
+body:has([popover]:popover-open) > :not([popover]) {
+    pointer-events: none;
+}
+
 textarea {
     max-height: 5.5rem;
     resize: vertical; /*Evita que  expanadan el textarea hacia los lados en el popover*/
