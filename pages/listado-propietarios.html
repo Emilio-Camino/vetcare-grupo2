@@ -14,13 +14,13 @@
         </div>
         <div class="fila-flexible">
             <span class="texto-parrafo">Recepcionista</span>
-            <a class="enlace" href="../index.html">Cerrar Sesion</a>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
         </div>
     </header>
     <div class="rejilla">
         <aside class="col-2 aside-vertical">
             <p>Recepción</p>
-            <nav aria-label="Menu Principal">
+            <nav aria-label="Menú principal">
                 <ul>
                     <li><a href="listado-citas.html">Citas</a></li>
                     <li><a href="listado-propietarios.html" aria-current="page">Propietarios</a></li>
@@ -30,22 +30,26 @@
         </aside>
         <main class= "col-10">
             <h1 class="texto-titulo">Propietarios</h1>
-            <div class="fila-espaciada">
+            <section class="fila-espaciada">
                 <h2 class="texto-subtitulo">Registro y consulta de propietarios de mascotas</h2>
                 <a class="btn-primario" href="registrar-propietario.html">+ Nuevo Propietario</a>
-            </div>
+            </section>
             
-            <section class="contenedor-tarjeta">
-                <form class="fila-flexible">
-                    <input type="search" placeholder="Buscar por nombre o número de cédula">
-                    <button type="submit" class="btn-secundario">Buscar</button>
+            <article class="contenedor-tarjeta">
+                <form method="get" action="listado-propietarios.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Buscar propietario</legend>
+                        <label class="texto-etiqueta" for="buscar-propietario">Buscar</label>
+                        <input id="buscar-propietario" name="q" type="search" placeholder="Buscar por nombre o número de cédula">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
                 </form>
                 <div class="tabla-responsive">
                     <table>
-                        <caption>Listado de propietarios registrados en la clinica</caption>
+                        <caption>Listado de propietarios registrados en la clínica</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Cedula</th>
+                                <th scope="col">Cédula</th>
                                 <th scope="col">Nombres y Apellidos</th>
                                 <th scope="col">Celular</th>
                                 <th scope="col">Correo Electrónico</th>
@@ -101,7 +105,7 @@
                         </tbody>
                     </table>                
                 </div>
-            </section>
+            </article>
         </main>
     </div>
     <footer class="fila-espaciada">
@@ -112,7 +116,7 @@
     <!--Tarjeta Popover-->    
     <div class="contenedor-tarjeta" id="eliminar-propietario" popover>
         <h2 class="texto-titulo">¿Dar de baja al propietario?</h2>
-        <p class="texto-parrafo">Esta accion dará de baja al propietario</p>
+        <p class="texto-parrafo">Esta acción dará de baja al propietario</p>
         <p class="texto-parrafo">Ingrese el motivo para continuar</p>
         <form class="columna-flexible" method="get" action="#">
             <fieldset class="columna-flexible">
