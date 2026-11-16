@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Mascotas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Recepcionista</span>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Recepción</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="listado-citas.html">Citas</a></li>
+                    <li><a href="listado-propietarios.html">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html" aria-current="page">Mascotas</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="col-10">
+            <h1 class="texto-titulo">Mascotas</h1>
+            <div class="fila-espaciada">
+                <h2 class="texto-subtitulo">Pacientes registrados y su propietario asociado</h2>
+                <a class="btn-primario" href="registrar-mascota.html">+ Nueva mascota</a>
+            </div>
+
+            <section class="contenedor-tarjeta">
+                <form class="fila-flexible">
+                    <input type="search" placeholder="Buscar por mascota o propietario...">
+                    <button type="submit" class="btn-secundario">Buscar</button>
+                </form>
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Listado de mascotas registradas</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Especie</th>
+                                <th scope="col">Raza</th>
+                                <th scope="col">Sexo</th>
+                                <th scope="col">Peso (kg)</th>
+                                <th scope="col">Propietario</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Toby</td>
+                                <td>Perro</td>
+                                <td>Golden Retriever</td>
+                                <td>Macho</td>
+                                <td>24.5</td>
+                                <td>Carlos Mendoza</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="historial-clinico.html">Historial</a>
+                                    <a class="enlace" href="editar-mascota.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-mascota">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Luna</td>
+                                <td>Gato</td>
+                                <td>Siamés</td>
+                                <td>Hembra</td>
+                                <td>4.2</td>
+                                <td>Ana Paredes</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="historial-clinico.html">Historial</a>
+                                    <a class="enlace" href="editar-mascota.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-mascota">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Max</td>
+                                <td>Perro</td>
+                                <td>Schnauzer</td>
+                                <td>Macho</td>
+                                <td>8.5</td>
+                                <td>Roberto Gómez</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="historial-clinico.html">Historial</a>
+                                    <a class="enlace" href="editar-mascota.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-mascota">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Misi</td>
+                                <td>Gato</td>
+                                <td>Mestizo</td>
+                                <td>Hembra</td>
+                                <td>3.8</td>
+                                <td>Patricia Torres</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="historial-clinico.html">Historial</a>
+                                    <a class="enlace" href="editar-mascota.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-mascota">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--Tarjeta Popover-->
+    <div class="contenedor-tarjeta" id="eliminar-mascota" popover>
+        <h2 class="texto-titulo">¿Dar de baja a la mascota?</h2>
+        <p class="texto-parrafo">Esta acción dará de baja a la mascota</p>
+        <p class="texto-parrafo">Ingrese el motivo para continuar</p>
+        <form class="columna-flexible" method="get" action="#">
+            <fieldset class="columna-flexible">
+                <legend>Motivo para dar de baja</legend>
+                <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
+                <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
+            </fieldset>
+            <div class="fila-espaciada">
+                <button type="button" class="btn-secundario" popovertarget="eliminar-mascota" popovertargetaction="hide">No</button>
+                <button type="submit" class="btn-peligro">Sí, dar de baja</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
