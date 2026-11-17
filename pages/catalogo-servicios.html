@@ -14,13 +14,13 @@
         </div>
         <div class="fila-flexible">
             <span class="texto-parrafo">Administrador</span>
-            <a class="enlace" href="../index.html">Cerrar Sesion</a>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
         </div>
     </header>
     <div class="rejilla">
         <aside class="col-2 aside-vertical">
-            <p>Administracion</p>
-            <nav aria-label="Menu Principal">
+            <p>Administración</p>
+            <nav aria-label="Menú Principal">
                 <ul>
                     <li><a href="gestion-veterinario.html">Veterinarios</a></li>
                     <li><a href="catalogo-servicios.html" aria-current="page">Servicios</a></li>
@@ -29,23 +29,26 @@
         </aside>
         <main class= "col-10">
             <h1 class="texto-titulo">Servicios</h1>
-            <div class="fila-espaciada">
-                <h2 class="texto-subtitulo">Catalogo de servicios veterinarios y tarifas</h2>
+            <section class="fila-espaciada">
+                <h2 class="texto-subtitulo">Catálogo de servicios veterinarios y tarifas</h2>
                 <a class="btn-primario" href="registrar-servicio.html">+ Nuevo servicio</a>
-            </div>
+            </section>
             
-            <section class="contenedor-tarjeta">
-                <form class="fila-flexible">
-                    <input type="search" placeholder="Buscar servicios">
-                    <button type="submit" class="btn-secundario">Buscar</button>
+            <article class="contenedor-tarjeta">
+                <form method="get" action="catalogo-servicios.html">
+                    <fieldset class="fila-flexible">
+                        <label class="texto-etiqueta" for="buscar-servicio"></label>
+                        <input id="buscar-servicio" name="q" type="search" placeholder="Buscar servicios">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
                 </form>
                 <div class="tabla-responsive">
                     <table>
-                        <caption>Catalogo de servicios clinicos</caption>
+                        <caption>Catálogo de servicios clínicos</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Servicio</th>
-                                <th scope="col">Descripcion</th>
+                                <th scope="col">Descripción</th>
                                 <th scope="col">Precio (USD)</th>
                                 <th scope="col">Acciones</th>
                             </tr>
@@ -53,7 +56,7 @@
                         <tbody>
                             <tr>
                                 <td>Consulta general</td>
-                                <td>Evaluacion clinica basica y diagnostico inicial</td>
+                                <td>Evaluación clínica básica y diagnóstico inicial</td>
                                 <td>25.00</td>
                                 <td class="fila-flexible">
                                     <a class="enlace" href="editar-servicio.html">Editar</a>
@@ -62,7 +65,7 @@
                             </tr>
                                 <tr>
                                 <td>Desparasitación</td>
-                                <td>Administracion de antiparasitario interno o externo</td>
+                                <td>Administración de antiparasitario interno o externo</td>
                                 <td>18.00</td>
                                 <td class="fila-flexible">
                                     <a class="enlace" href="editar-servicio.html">Editar</a>
@@ -81,7 +84,7 @@
                         </tbody>
                     </table>                
                 </div>
-            </section>
+            </article>
         </main>
     </div>
     <footer class="fila-espaciada">
@@ -92,13 +95,13 @@
     <!--Tarjeta Popover-->    
     <div class="contenedor-tarjeta" id="eliminar-servicio" popover>
         <h2 class="texto-titulo">¿Dar de baja al servicio?</h2>
-        <p class="texto-parrafo">Esta accion dará de baja al servicio</p>
+        <p class="texto-parrafo">Esta acción dará de baja al servicio</p>
         <p class="texto-parrafo">Ingrese el motivo para continuar</p>
         <form class="columna-flexible" method="get" action="#">
             <fieldset class="columna-flexible">
             <legend>Motivo para dar de baja</legend>
             <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
-            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
+            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Servicio descontinuado (máx. 200 caracteres)..."></textarea>
             </fieldset>
             <div class="fila-espaciada">
                 <button type="button" class="btn-secundario" popovertarget="eliminar-servicio" popovertargetaction="hide">No</button>
