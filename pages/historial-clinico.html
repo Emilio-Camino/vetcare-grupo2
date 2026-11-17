@@ -28,15 +28,16 @@
             </nav>
         </aside>
         <main class="col-10">
-            <div class="columna-flexible">
+            <section class="columna-flexible">
                 <a class="enlace" href="agenda-medica.html">← Volver a la agenda</a>
                 <h1 class="texto-titulo">Historial clínico: Toby</h1>
                 <h2 class="texto-subtitulo">Atenciones médicas anteriores registradas</h2>
-            </div>
+            </section>
 
-            <section class="contenedor-tarjeta">
-                <fieldset>
-                    <legend>Datos de la mascota</legend>
+            <article class="contenedor-tarjeta">
+              <h2 class="texto-subtitulo">Atenciones médicas</h2>   
+                <section aria-label="Datos de la mascota">
+                    <h3 class="texto-subtitulo">Datos de la mascota</h3>
                     <div class="fila-flexible">
                         <div class="columna-flexible">
     <span class="texto-etiqueta">Mascota</span>
@@ -58,11 +59,20 @@
                             <span class="texto-marca">Carlos Mendoza · 0991234567</span>
                         </div>
                     </div>
-                </fieldset>
+                </section>
 
-                <form class="fila-flexible" method="get" action="historial-clinico.html">
-                    <input type="search" name="mascota" placeholder="Buscar otra mascota...">
-                    <button type="submit" class="btn-secundario">Consultar</button>
+                <form method="get" action="historial-clinico.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Buscar paciente</legend>
+                        <label class="texto-etiqueta" for="buscar-paciente">Mascota</label>
+                        <input id="buscar-paciente" type="search" name="mascota" list="mascotas-historial" placeholder="Buscar otra mascota...">
+                        <button type="submit" class="btn-secundario">Consultar</button>
+                        <datalist id="mascotas-historial">
+                            <option value="Toby">
+                            <option value="Luna">
+                            <option value="Max">
+                        </datalist>
+                    </fieldset>
                 </form>
 
                 <div class="tabla-responsive">
@@ -106,7 +116,7 @@
                         </tbody>
                     </table>
                 </div>
-            </section>
+            </article>
         </main>
     </div>
     <footer class="fila-espaciada">

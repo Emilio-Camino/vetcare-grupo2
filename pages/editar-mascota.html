@@ -29,17 +29,18 @@
             </nav>
         </aside>
         <main class="col-10">
-            <div class="columna-flexible">
+            <section class="columna-flexible">
                 <a class="enlace" href="listado-mascotas.html">← Volver a mascotas</a>
                 <h1 class="texto-titulo">Editar mascota</h1>
-                <section class="contenedor-tarjeta">
+                <article class="contenedor-tarjeta">
+                    <h2 class="texto-subtitulo">Datos de la mascota</h2>
                     <form id="editar-mascota" class="columna-flexible" method="get" action="listado-mascotas.html">
                         <fieldset>
                             <legend>Datos de la mascota</legend>
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="nombre" class="texto-etiqueta">Nombre*</label>
-                                    <input id="nombre" name="nombre" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Toby" value="Toby">
+                                    <input id="nombre" name="nombre" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" minlength="2" maxlength="40" placeholder="Toby" value="Toby">
                                 </div>
 
                                 <div class="columna-flexible">
@@ -49,7 +50,7 @@
                                         <option value="perro" selected>Perro</option>
                                         <option value="gato">Gato</option>
                                         <option value="ave">Ave</option>
-                                        <option value="conejo">Conejo</option>
+                                        <option value="roedor">Roedor</option>
                                         <option value="otro">Otro</option>
                                     </select>
                                 </div>
@@ -58,17 +59,24 @@
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="raza" class="texto-etiqueta">Raza</label>
-                                    <input id="raza" name="raza" type="text" maxlength="50" placeholder="Golden Retriever" value="Golden Retriever">
+                                    <input id="raza" name="raza" type="text" maxlength="50" list="razas-comunes" placeholder="Golden Retriever" value="Golden Retriever">
+                                    <datalist id="razas-comunes">
+                                        <option value="Golden Retriever">
+                                        <option value="Schnauzer">
+                                        <option value="Labrador">
+                                        <option value="Siamés">
+                                        <option value="Mestizo">
+                                    </datalist>
                                 </div>
 
                                 <div class="columna-flexible">
                                     <span id="etiqueta-sexo" class="texto-etiqueta">Sexo*</span>
                                     <div class="fila-flexible" role="radiogroup" aria-labelledby="etiqueta-sexo">
-                                        <label class="texto-parrafo">
-                                            <input type="radio" name="sexo" value="macho" required checked> Macho
+                                        <label class="texto-parrafo" for="sexo-macho">
+                                            <input id="sexo-macho" type="radio" name="sexo" value="macho" required checked> Macho
                                         </label>
-                                        <label class="texto-parrafo">
-                                            <input type="radio" name="sexo" value="hembra"> Hembra
+                                        <label class="texto-parrafo" for="sexo-hembra">
+                                            <input id="sexo-hembra" type="radio" name="sexo" value="hembra"> Hembra
                                         </label>
                                     </div>
                                 </div>
@@ -97,7 +105,9 @@
                                     <select id="propietario" name="propietario" required>
                                         <option value="">Seleccione un propietario</option>
                                         <option value="1712345678" selected>Carlos Mendoza — 1712345678</option>
-                                        <option value="1755745678">Marco Alexander Rivas Casales — 1755745678</option>
+                                        <option value="1723456789">Ana Paredes — 1723456789</option>
+                                        <option value="1709876543">Roberto Gómez — 1709876543</option>
+                                        <option value="1715678901">Patricia Torres — 1715678901</option>
                                     </select>
                                 </div>
                             </div>
@@ -114,8 +124,8 @@
                         <a class="btn-secundario" href="listado-mascotas.html">Cancelar</a>
                         <button class="btn-primario" form="editar-mascota" type="submit">Guardar cambios</button>
                     </div>
-                </section>
-            </div>
+                </article>
+            </section>
         </main>
     </div>
     <footer class="fila-espaciada">

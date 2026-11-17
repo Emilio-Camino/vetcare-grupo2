@@ -28,18 +28,24 @@
                 </ul>
             </nav>
         </aside>
-        <main class="col-10">
-            <h1 class="texto-titulo">Mascotas</h1>
-            <div class="fila-espaciada">
+            <main class="col-10">
+                <h1 class="texto-titulo">Mascotas</h1>
+            <section class="fila-espaciada">
                 <h2 class="texto-subtitulo">Pacientes registrados y su propietario asociado</h2>
                 <a class="btn-primario" href="registrar-mascota.html">+ Nueva mascota</a>
-            </div>
+            </section>
 
-            <section class="contenedor-tarjeta">
-                <form class="fila-flexible">
-                    <input type="search" placeholder="Buscar por mascota o propietario...">
-                    <button type="submit" class="btn-secundario">Buscar</button>
+            <article class="contenedor-tarjeta">
+                <h2 class="texto-subtitulo">Mascotas registradas</h2>
+                <form method="get" action="listado-mascotas.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Buscar mascota</legend>
+                        <label class="texto-etiqueta" for="buscar-mascota">Buscar</label>
+                        <input id="buscar-mascota" name="q" type="search" placeholder="Buscar por mascota o propietario...">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
                 </form>
+
                 <div class="tabla-responsive">
                     <table>
                         <caption>Listado de mascotas registradas</caption>
@@ -106,7 +112,7 @@
                         </tbody>
                     </table>
                 </div>
-            </section>
+            </article>
         </main>
     </div>
     <footer class="fila-espaciada">
@@ -114,7 +120,6 @@
         <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
     </footer>
 
-    <!--Tarjeta Popover-->
     <div class="contenedor-tarjeta" id="eliminar-mascota" popover>
         <h2 class="texto-titulo">¿Dar de baja a la mascota?</h2>
         <p class="texto-parrafo">Esta acción dará de baja a la mascota</p>

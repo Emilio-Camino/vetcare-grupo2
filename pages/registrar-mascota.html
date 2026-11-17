@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,16 +10,16 @@
     <header class="fila-espaciada">
         <div>
             <span class="texto-marca">VetCare</span>
-            <span class="texto-subtitulo">· Clínica Huellitas</span>
+            <span class="texto-subtitulo">Â· ClÃ­nica Huellitas</span>
         </div>
         <div class="fila-flexible">
             <span class="texto-parrafo">Recepcionista</span>
-            <a class="enlace" href="../index.html">Cerrar sesión</a>
+            <a class="enlace" href="../index.html">Cerrar sesiÃ³n</a>
         </div>
     </header>
     <div class="rejilla">
         <aside class="col-2 aside-vertical">
-            <p>Recepción</p>
+            <p>RecepciÃ³n</p>
             <nav aria-label="Menu Principal">
                 <ul>
                     <li><a href="listado-citas.html">Citas</a></li>
@@ -29,11 +29,12 @@
             </nav>
         </aside>
         <main class="col-10">
-            <div class="columna-flexible">
-                <a class="enlace" href="listado-mascotas.html">← Volver a mascotas</a>
+            <section class="columna-flexible">
+                <a class="enlace" href="listado-mascotas.html"> Volver a mascotas</a>
                 <h1 class="texto-titulo">Nueva mascota</h1>
-                <section class="contenedor-tarjeta">
-                    <img class="imagen-mascota" src="../img/perrito.jpg" alt="Ilustración de una mascota">
+                <article class="contenedor-tarjeta">
+                    <h2 class="texto-subtitulo">Registro de mascota</h2>
+                    <img class="imagen-mascota" src="../img/perrito.jpg" alt="IlustraciÃ³n de una mascota">
 
                     <form id="registro-mascota" class="columna-flexible" method="get" action="listado-mascotas.html">
                         <fieldset>
@@ -41,7 +42,7 @@
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="nombre" class="texto-etiqueta">Nombre*</label>
-                                    <input id="nombre" name="nombre" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Ej: Toby">
+                                    <input id="nombre" name="nombre" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" minlength="2" maxlength="40" placeholder="Ej: Toby">
                                 </div>
 
                                 <div class="columna-flexible">
@@ -51,7 +52,7 @@
                                         <option value="perro">Perro</option>
                                         <option value="gato">Gato</option>
                                         <option value="ave">Ave</option>
-                                        <option value="conejo">Conejo</option>
+                                        <option value="roedor">Roedor</option>
                                         <option value="otro">Otro</option>
                                     </select>
                                 </div>
@@ -60,17 +61,24 @@
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="raza" class="texto-etiqueta">Raza</label>
-                                    <input id="raza" name="raza" type="text" maxlength="50" placeholder="Ej: Golden Retriever">
+                                    <input id="raza" name="raza" type="text" maxlength="50" list="razas-comunes" placeholder="Ej: Golden Retriever">
+                                    <datalist id="razas-comunes">
+                                        <option value="Golden Retriever">
+                                        <option value="Schnauzer">
+                                        <option value="Labrador">
+                                        <option value="SiamÃ©s">
+                                        <option value="Mestizo">
+                                    </datalist>
                                 </div>
 
                                 <div class="columna-flexible">
                                     <span id="etiqueta-sexo" class="texto-etiqueta">Sexo*</span>
                                     <div class="fila-flexible" role="radiogroup" aria-labelledby="etiqueta-sexo">
-                                        <label class="texto-parrafo">
-                                            <input type="radio" name="sexo" value="macho" required> Macho
+                                        <label class="texto-parrafo" for="sexo-macho">
+                                            <input id="sexo-macho" type="radio" name="sexo" value="macho" required> Macho
                                         </label>
-                                        <label class="texto-parrafo">
-                                            <input type="radio" name="sexo" value="hembra"> Hembra
+                                        <label class="texto-parrafo" for="sexo-hembra">
+                                            <input id="sexo-hembra" type="radio" name="sexo" value="hembra"> Hembra
                                         </label>
                                     </div>
                                 </div>
@@ -98,10 +106,10 @@
                                     <label for="propietario" class="texto-etiqueta">Propietario*</label>
                                     <select id="propietario" name="propietario" required>
                                         <option value="">Seleccione un propietario</option>
-                                        <option value="1712345678">Carlos Mendoza — 1712345678</option>
-                                        <option value="1723456789">Ana Paredes — 1723456789</option>
-                                        <option value="1709876543">Roberto Gómez — 1709876543</option>
-                                        <option value="1715678901">Patricia Torres — 1715678901</option>
+                                        <option value="1712345678">Carlos Mendoza â€” 1712345678</option>
+                                        <option value="1723456789">Ana Paredes â€” 1723456789</option>
+                                        <option value="1709876543">Roberto GÃ³mez â€” 1709876543</option>
+                                        <option value="1715678901">Patricia Torres â€” 1715678901</option>
                                     </select>
                                 </div>
                             </div>
@@ -109,7 +117,7 @@
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="observaciones" class="texto-etiqueta">Observaciones</label>
-                                    <textarea id="observaciones" name="observaciones" rows="3" maxlength="300" placeholder="Notas breves sobre la mascota (máx. 300 caracteres)..."></textarea>
+                                    <textarea id="observaciones" name="observaciones" rows="3" maxlength="300" placeholder="Notas breves sobre la mascota (mÃ¡x. 300 caracteres)..."></textarea>
                                 </div>
                             </div>
                         </fieldset>
@@ -118,13 +126,14 @@
                         <a class="btn-secundario" href="listado-mascotas.html">Cancelar</a>
                         <button class="btn-primario" form="registro-mascota" type="submit">Guardar</button>
                     </div>
-                </section>
-            </div>
+                </article>
+            </section>
         </main>
     </div>
     <footer class="fila-espaciada">
-        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-parrafo">VetCare Â· ClÃ­nica Veterinaria Huellitas Â· Quito</p>
         <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
+
