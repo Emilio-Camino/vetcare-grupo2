@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda del dia</title>
+    <title>Agenda del día</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <span class="texto-subtitulo">· Clínica Huellitas </span>
         </div>
         <div class="fila-flexible">
-            <span class="texto-parrafo">Veterinario Dra.Valeria Gómez</span>
+            <span class="texto-parrafo">Veterinario · Dra. Valeria Gómez</span>
             <a class="enlace" href="../index.html">Cerrar Sesión</a>
         </div>
     </header>
@@ -36,11 +36,14 @@
             </div>
 
             <form class="columna-flexible" method="get" action="agenda-medica.html">
-                <label for="fecha" class="texto-etiqueta">Fecha:</label>
-                <input type="date" id="fecha" name="fecha" value="2026-11-11" required>
-                <div>
-                    <button type="submit" class="btn-secundario">Consultar</button>
-                </div>
+                <fieldset class="columna-flexible">
+                    <legend class="texto-etiqueta">Consultar fecha</legend>
+                    <label for="fecha" class="texto-etiqueta">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" value="2026-11-11" required>
+                    <div>
+                        <button type="submit" class="btn-secundario">Consultar</button>
+                    </div>
+                </fieldset>
             </form>
         </div>
 
@@ -66,7 +69,7 @@
                                 <td>Toby</td>
                                 <td>Perro</td>
                                 <td>Carlos Mendoza</td>
-                                <td>consulta general</td>
+                                <td>Consulta general</td>
                                 <td><span class="estado estado-pendiente">Programada</span></td>
                                 <td class="fila-flexible">
                                     <a class="enlace" href="registrar-atencion-medica.html">Atender</a>
@@ -92,7 +95,7 @@
                                 <td>11:30</td>
                                 <td>Max</td>
                                 <td>Perro</td>
-                                <td>Robeto Gómez</td>
+                                <td>Roberto Gómez</td>
                                 <td>Desparasitación</td>
                                 <td><span class="estado estado-pendiente">Programada</span></td>
                                 <td class="fila-flexible">
@@ -116,7 +119,7 @@
     
 
     <footer class="fila-espaciada">
-         <p class="texto-parrafo">VetCare· Clínica Veterinaria Huellitas · Quito</p>
+         <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
         <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
     </footer>
 </body>

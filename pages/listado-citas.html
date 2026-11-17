@@ -31,14 +31,18 @@
         <main class="col-10">
             <h1 class="texto-titulo">Citas</h1>
             <div class="fila-espaciada">
-                <h2 class="texto-subtitulo">Agenda general de citas programada, atendidas y canceladas</h2>
-                <a class="btn-primario" href="agendar-cita.html">+ Agenda cita</a>
+                <h2 class="texto-subtitulo">Agenda general de citas programadas, atendidas y canceladas</h2>
+                <a class="btn-primario" href="agendar-cita.html">+ Agendar cita</a>
             </div>
 
             <div class="contenedor-tarjeta">
-                <form class="fila-flexible">
-                    <input type="search" placeholder="Buscar por mascota, propietario o veterinario..">
-                    <button type="submit" class="btn-secundario">Buscar</button>
+                <form method="get" action="listado-citas.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Buscar cita</legend>
+                        <label class="texto-etiqueta" for="buscar-cita">Buscar</label>
+                        <input id="buscar-cita" name="q" type="search" placeholder="Buscar por mascota, propietario o veterinario...">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
                 </form>
                 <div class="tabla-responsive">
                     <table>
@@ -50,7 +54,7 @@
                                 <th scope="col">Mascota</th>
                                 <th scope="col">Propietario</th>
                                 <th scope="col">Servicio</th>
-                                <th scope="col">veterinario</th>
+                                <th scope="col">Veterinario</th>
                                 <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
@@ -62,7 +66,7 @@
                                 <td>09:00</td>
                                 <td>Toby</td>
                                 <td>Carlos Mendoza</td>
-                                <td>consulta general</td>
+                                <td>Consulta general</td>
                                 <td>Dra. Valeria Gómez</td>
                                 <td><span class="estado estado-pendiente">Programada</span></td>
                                 <td class="fila-flexible">
@@ -80,9 +84,7 @@
                                 <td>Vacunación</td>
                                 <td>Dr. Mateo Ríos</td>
                                 <td><span class="estado estado-atendida">Atendida</span></td>
-                                <td class="fila-flexible">
-                                    <a class="enlace" href="historial-clinico.html">Ver historial</a>
-                                </td>
+                                <td>—</td>
                             </tr>
 
                             <!--tercera fila-->
@@ -90,7 +92,7 @@
                                 <td>2026-11-12</td>
                                 <td>10:30</td>
                                 <td>Max</td>
-                                <td>Robeto Gómez</td>
+                                <td>Roberto Gómez</td>
                                 <td>Desparasitación</td>
                                 <td>Dra. Sofía Andrade</td>
                                 <td><span class="estado estado-pendiente">Programada</span></td>
@@ -120,7 +122,7 @@
         </main>
     </div>
     <footer class="fila-espaciada">
-        <p class="texto-parrafo">VetCare· Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
         <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
     </footer>
 

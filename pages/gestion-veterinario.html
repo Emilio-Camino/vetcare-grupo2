@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion Veterinario</title>
+    <title>Gestión de Veterinarios</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -37,7 +37,8 @@
             <article class="contenedor-tarjeta">
                 <form method="get" action="gestion-veterinario.html">
                     <fieldset class="fila-flexible">
-                        <label class="texto-etiqueta" for="buscar-veterinario"></label>
+                        <legend class="texto-etiqueta">Buscar veterinario</legend>
+                        <label class="texto-etiqueta" for="buscar-veterinario">Buscar</label>
                         <input id="buscar-veterinario" name="q" type="search" placeholder="Buscar por nombre o especialidad">
                         <button type="submit" class="btn-secundario">Buscar</button>
                     </fieldset>
@@ -47,11 +48,11 @@
                         <caption>Personal veterinario registrado</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Cedula</th>
+                                <th scope="col">Cédula</th>
                                 <th scope="col">Nombres y apellidos</th>
                                 <th scope="col">Especialidad</th>
                                 <th scope="col">Celular</th>
-                                <th scope="col">Correo electronico</th>
+                                <th scope="col">Correo electrónico</th>
                                 <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
@@ -107,9 +108,9 @@
     <!--Tarjeta Popover-->    
     <div class="contenedor-tarjeta" id="eliminar-veterinario" popover>
         <h2 class="texto-titulo">¿Dar de baja al veterinario?</h2>
-        <p class="texto-parrafo">Esta accion dará de baja al veterinario</p>
+        <p class="texto-parrafo">Esta acción dará de baja al veterinario</p>
         <p class="texto-parrafo">Ingrese el motivo para continuar</p>
-        <form class="columna-flexible" method="get" action="#">
+        <form class="columna-flexible" method="get" action="gestion-veterinario.html">
             <fieldset class="columna-flexible">
             <legend>Motivo para dar de baja</legend>
             <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>

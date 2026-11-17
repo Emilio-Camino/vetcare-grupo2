@@ -36,9 +36,13 @@
             </div>
 
             <section class="contenedor-tarjeta">
-                <form class="fila-flexible">
-                    <input type="search" placeholder="Buscar por mascota o propietario...">
-                    <button type="submit" class="btn-secundario">Buscar</button>
+                <form method="get" action="listado-mascotas.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Buscar mascota</legend>
+                        <label class="texto-etiqueta" for="buscar-mascota">Buscar</label>
+                        <input id="buscar-mascota" name="q" type="search" placeholder="Buscar por mascota o propietario...">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
                 </form>
                 <div class="tabla-responsive">
                     <table>
@@ -119,7 +123,7 @@
         <h2 class="texto-titulo">¿Dar de baja a la mascota?</h2>
         <p class="texto-parrafo">Esta acción dará de baja a la mascota</p>
         <p class="texto-parrafo">Ingrese el motivo para continuar</p>
-        <form class="columna-flexible" method="get" action="#">
+        <form class="columna-flexible" method="get" action="listado-mascotas.html">
             <fieldset class="columna-flexible">
                 <legend>Motivo para dar de baja</legend>
                 <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>

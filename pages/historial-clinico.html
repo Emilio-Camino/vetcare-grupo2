@@ -60,9 +60,13 @@
                     </div>
                 </fieldset>
 
-                <form class="fila-flexible" method="get" action="historial-clinico.html">
-                    <input type="search" name="mascota" placeholder="Buscar otra mascota...">
-                    <button type="submit" class="btn-secundario">Consultar</button>
+                <form method="get" action="historial-clinico.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Consultar mascota</legend>
+                        <label class="texto-etiqueta" for="buscar-historial">Buscar</label>
+                        <input id="buscar-historial" type="search" name="mascota" placeholder="Buscar otra mascota...">
+                        <button type="submit" class="btn-secundario">Consultar</button>
+                    </fieldset>
                 </form>
 
                 <div class="tabla-responsive">
