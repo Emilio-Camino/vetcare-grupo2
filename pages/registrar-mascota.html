@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Mascota</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Recepcionista</span>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Recepción</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="listado-citas.html">Citas</a></li>
+                    <li><a href="listado-propietarios.html">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html" aria-current="page">Mascotas</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="col-10">
+            <div class="columna-flexible">
+                <a class="enlace" href="listado-mascotas.html">← Volver a mascotas</a>
+                <h1 class="texto-titulo">Nueva mascota</h1>
+                <section class="contenedor-tarjeta">
+                    <img class="imagen-mascota" src="../img/perrito.jpg" alt="Ilustración de una mascota">
+
+                    <form id="registro-mascota" class="columna-flexible" method="get" action="listado-mascotas.html">
+                        <fieldset>
+                            <legend>Datos de la mascota</legend>
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="nombre" class="texto-etiqueta">Nombre*</label>
+                                    <input id="nombre" name="nombre" type="text" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Ej: Toby">
+                                </div>
+
+                                <div class="columna-flexible">
+                                    <label for="especie" class="texto-etiqueta">Especie*</label>
+                                    <select id="especie" name="especie" required>
+                                        <option value="">Seleccione una especie</option>
+                                        <option value="perro">Perro</option>
+                                        <option value="gato">Gato</option>
+                                        <option value="ave">Ave</option>
+                                        <option value="conejo">Conejo</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="raza" class="texto-etiqueta">Raza</label>
+                                    <input id="raza" name="raza" type="text" maxlength="50" placeholder="Ej: Golden Retriever">
+                                </div>
+
+                                <div class="columna-flexible">
+                                    <span id="etiqueta-sexo" class="texto-etiqueta">Sexo*</span>
+                                    <div class="fila-flexible" role="radiogroup" aria-labelledby="etiqueta-sexo">
+                                        <label class="texto-parrafo">
+                                            <input type="radio" name="sexo" value="macho" required> Macho
+                                        </label>
+                                        <label class="texto-parrafo">
+                                            <input type="radio" name="sexo" value="hembra"> Hembra
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="fecha-nacimiento" class="texto-etiqueta">Fecha de nacimiento</label>
+                                    <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" max="2026-11-15">
+                                    <small>No puede ser posterior a la fecha actual.</small>
+                                </div>
+
+                                <div class="columna-flexible">
+                                    <label for="peso" class="texto-etiqueta">Peso (kg)*</label>
+                                    <input id="peso" name="peso" type="number" required min="0.1" max="120" step="0.1" placeholder="24.5">
+                                    <small>Entre 0.1 y 120 kg (un decimal).</small>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Propietario y observaciones</legend>
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="propietario" class="texto-etiqueta">Propietario*</label>
+                                    <select id="propietario" name="propietario" required>
+                                        <option value="">Seleccione un propietario</option>
+                                        <option value="1712345678">Carlos Mendoza — 1712345678</option>
+                                        <option value="1723456789">Ana Paredes — 1723456789</option>
+                                        <option value="1709876543">Roberto Gómez — 1709876543</option>
+                                        <option value="1715678901">Patricia Torres — 1715678901</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="fila-flexible">
+                                <div class="columna-flexible">
+                                    <label for="observaciones" class="texto-etiqueta">Observaciones</label>
+                                    <textarea id="observaciones" name="observaciones" rows="3" maxlength="300" placeholder="Notas breves sobre la mascota (máx. 300 caracteres)..."></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="fila-flexible">
+                        <a class="btn-secundario" href="listado-mascotas.html">Cancelar</a>
+                        <button class="btn-primario" form="registro-mascota" type="submit">Guardar</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

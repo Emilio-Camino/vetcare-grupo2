@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Propietarios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Recepcionista</span>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Recepción</p>
+            <nav aria-label="Menú principal">
+                <ul>
+                    <li><a href="listado-citas.html">Citas</a></li>
+                    <li><a href="listado-propietarios.html" aria-current="page">Propietarios</a></li>
+                    <li><a href="listado-mascotas.html">Mascotas</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class= "col-10">
+            <h1 class="texto-titulo">Propietarios</h1>
+            <section class="fila-espaciada">
+                <h2 class="texto-subtitulo">Registro y consulta de propietarios de mascotas</h2>
+                <a class="btn-primario" href="registrar-propietario.html">+ Nuevo Propietario</a>
+            </section>
+            
+            <div class="contenedor-tarjeta">
+                <form method="get" action="listado-propietarios.html">
+                    <fieldset class="fila-flexible">
+                        <legend class="texto-etiqueta">Buscar propietario</legend>
+                        <label class="texto-etiqueta" for="buscar-propietario">Buscar</label>
+                        <input id="buscar-propietario" name="q" type="search" placeholder="Buscar por nombre o número de cédula">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
+                </form>
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Listado de propietarios registrados en la clínica</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Cédula</th>
+                                <th scope="col">Nombres y Apellidos</th>
+                                <th scope="col">Celular</th>
+                                <th scope="col">Correo Electrónico</th>
+                                <th scope="col">Mascotas</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1723456789</td>
+                                <td>Ana Paredes</td>
+                                <td>0987654321</td>
+                                <td>ana.paredes@correo.com</td>
+                                <td>Luna (Gato)</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-propietario.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-propietario">Eliminar</button>
+                                </td>
+                            </tr>
+                                <tr>
+                                <td>1709876543</td>
+                                <td>Roberto Gómez</td>
+                                <td>0998765432</td>
+                                <td>roberto.gomez@correo.com</td>
+                                <td>Max (Perro)</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-propietario.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-propietario">Eliminar</button>
+                                </td>
+                            </tr>
+                                <tr>
+                                <td>1715678901</td>
+                                <td>Patricia Torres</td>
+                                <td>0981122334</td>
+                                <td>patricia.torres@correo.com</td>
+                                <td>Misi (Gato)</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-propietario.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-propietario">Eliminar</button>
+                                </td>
+                            </tr>
+                                <tr>
+                                <td>1712345678</td>
+                                <td>Carlos Mendoza</td>
+                                <td>0991234567</td>
+                                <td>carlos.mendoza@correo.com</td>
+                                <td>Toby (Perro)</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-propietario.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-propietario">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--Tarjeta Popover-->    
+    <div class="contenedor-tarjeta" id="eliminar-propietario" popover>
+        <h2 class="texto-titulo">¿Dar de baja al propietario?</h2>
+        <p class="texto-parrafo">Esta acción dará de baja al propietario</p>
+        <p class="texto-parrafo">Ingrese el motivo para continuar</p>
+        <form class="columna-flexible" method="get" action="#">
+            <fieldset class="columna-flexible">
+            <legend>Motivo para dar de baja</legend>
+            <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
+            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
+            </fieldset>
+            <div class="fila-espaciada">
+                <button type="button" class="btn-secundario" popovertarget="eliminar-propietario" popovertargetaction="hide">No</button>
+                <button type="submit" class="btn-peligro"> Sí, dar de baja</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

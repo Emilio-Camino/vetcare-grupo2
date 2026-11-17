@@ -1,0 +1,27 @@
+.contenedor-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tarjeta-login{
+    width: 100%;
+    max-width: 25rem;
+}
+
+/*Se necesita porque en general usamos un header diferente*/
+.tarjeta-login header {
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+form{
+    gap: 1.2rem;
+}
+
+body{
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0.70), hsla(0, 0%, 100%, 0.70)), url("../img/fondo-login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

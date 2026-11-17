@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Veterinario</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Administrador</span>
+            <a class="enlace" href="../index.html">Cerrar Sesion</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Administracion</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="gestion-veterinario.html" aria-current="page">Veterinarios</a></li>
+                    <li><a href="catalogo-servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class= "col-10">
+            <div class="columna-flexible">
+                <a class="enlace" href="gestion-veterinario.html">← Volver a veterinarios</a>
+                <h1 class="texto-titulo">Editar veterinario</h1>
+                <section class="contenedor-tarjeta">
+                    <form id="registro-veterinario" class="columna-flexible" method="get" action="gestion-veterinario.html">
+                        <fieldset>
+                            <legend>Datos del veterinario</legend>
+                                <div class="fila-flexible">
+                                    <div class="columna-flexible">
+                                        <label for="cedula" class="texto-etiqueta">Cédula*</label>
+                                        <input id="cedula" name="cedula" type="text" value="1710223344" required pattern="[0-9]{10}" maxlength="10" title="Debe contener exactamente 10 dígitos numéricos" placeholder="1710223344">   
+                                    </div>
+                                    <div class="columna-flexible">
+                                        <label for="especialidad" class="texto-etiqueta">Especialidad*</label>
+                                        <select name="especialidad" id="especialidad">
+                                            <option value="" disabled>Seleccione una especialidad</option>
+                                            <option value="medicina_general" selected>Medicina General</option>
+                                            <option value="cirugia">Cirugia</option>
+                                            <option value="dermatologia">Dermatologia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="fila-flexible">
+                                    <div class="columna-flexible">
+                                        <label for="nombres" class="texto-etiqueta">Nombre*</label>
+                                        <input id="nombres" name="nombres" type="text" value="Valeria" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Valeria">
+                                    </div>
+
+                                    <div class="columna-flexible">
+                                        <label for="apellidos" class="texto-etiqueta">Apellidos*</label>
+                                        <input id="apellidos" name="apellidos" type="text" value="Gomez" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}" minlength="2" maxlength="50" placeholder="Gomez">   
+                                    </div>
+                                </div>
+                                
+                                <div class="fila-flexible">
+                                    <div class="columna-flexible">
+                                        <label for="telefono-celular" class="texto-etiqueta">Teléfono Celular*</label>
+                                        <input id="telefono-celular" name="telefono-celular" type="tel" value="0994455667" required pattern="09[0-9]{8}" maxlength="10" title="Debe tener 10 dígitos e iniciar con 09" placeholder="0994455667">
+                                    </div>
+                                    <div class="columna-flexible">
+                                        <label for="correo" class="texto-etiqueta">Correo Electrónico*</label>
+                                        <input id="correo" name="correo" type="email" value="valeria.gomez@huellitas.ec" required  placeholder="valeria.gomez@huellitas.ec">
+                                    </div>
+                                </div>
+                                <div class="fila-flexible">
+                                    <div>
+                                        <input type="checkbox" name="disponibilidad" id="disponibilidad"> Disponible para agenda de citas
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </form>
+                        <div class="fila-flexible">
+                            <a class="btn-secundario" href="gestion-veterinario.html">Cancelar</a>
+                            <button class="btn-primario" form="registro-veterinario" type="submit">Guardar</button>
+                        </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Clínico</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Veterinario: Dra. Valeria Gómez</span>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Atención médica</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="agenda-medica.html">Agenda del día</a></li>
+                    <li><a href="historial-clinico.html" aria-current="page">Historial clínico</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="col-10">
+            <div class="columna-flexible">
+                <a class="enlace" href="agenda-medica.html">← Volver a la agenda</a>
+                <h1 class="texto-titulo">Historial clínico: Toby</h1>
+                <h2 class="texto-subtitulo">Atenciones médicas anteriores registradas</h2>
+            </div>
+
+            <section class="contenedor-tarjeta">
+                <fieldset>
+                    <legend>Datos de la mascota</legend>
+                    <div class="fila-flexible">
+                        <div class="columna-flexible">
+    <span class="texto-etiqueta">Mascota</span>
+    <div class="fila-flexible">
+        <img class="imagen-mascota-mini" src="../img/perrito.jpg" alt="Ilustración de una mascota">
+        <span class="texto-marca">Toby (Perro · Golden Retriever)</span>
+    </div>
+</div>
+                        <div class="columna-flexible">
+                            <span class="texto-etiqueta">Sexo</span>
+                            <span class="texto-marca">Macho</span>
+                        </div>
+                        <div class="columna-flexible">
+                            <span class="texto-etiqueta">Peso actual</span>
+                            <span class="texto-marca">24.5 kg</span>
+                        </div>
+                        <div class="columna-flexible">
+                            <span class="texto-etiqueta">Propietario</span>
+                            <span class="texto-marca">Carlos Mendoza · 0991234567</span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <form class="fila-flexible" method="get" action="historial-clinico.html">
+                    <input type="search" name="mascota" placeholder="Buscar otra mascota...">
+                    <button type="submit" class="btn-secundario">Consultar</button>
+                </form>
+
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Atenciones médicas anteriores de Toby</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Veterinario</th>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Peso (kg)</th>
+                                <th scope="col">Diagnóstico</th>
+                                <th scope="col">Tratamiento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2026-08-18</td>
+                                <td>Dra. Valeria Gómez</td>
+                                <td>Consulta general</td>
+                                <td>24.2</td>
+                                <td>Otitis externa leve</td>
+                                <td>Limpieza auricular y gotas óticas cada 12h por 7 días</td>
+                            </tr>
+                            <tr>
+                                <td>2026-04-10</td>
+                                <td>Dr. Mateo Ríos</td>
+                                <td>Vacunación</td>
+                                <td>23.8</td>
+                                <td>Paciente sano, control anual</td>
+                                <td>Vacuna polivalente anual aplicada</td>
+                            </tr>
+                            <tr>
+                                <td>2025-11-22</td>
+                                <td>Dra. Sofía Andrade</td>
+                                <td>Desparasitación</td>
+                                <td>23.0</td>
+                                <td>Control preventivo</td>
+                                <td>Desparasitante oral dosis única</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

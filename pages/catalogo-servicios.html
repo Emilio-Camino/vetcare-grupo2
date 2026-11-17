@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Servicios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="fila-espaciada">
+        <div>
+            <span class="texto-marca">VetCare</span>
+            <span class="texto-subtitulo">· Clínica Huellitas</span>
+        </div>
+        <div class="fila-flexible">
+            <span class="texto-parrafo">Administrador</span>
+            <a class="enlace" href="../index.html">Cerrar Sesion</a>
+        </div>
+    </header>
+    <div class="rejilla">
+        <aside class="col-2 aside-vertical">
+            <p>Administracion</p>
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="gestion-veterinario.html">Veterinarios</a></li>
+                    <li><a href="catalogo-servicios.html" aria-current="page">Servicios</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class= "col-10">
+            <h1 class="texto-titulo">Servicios</h1>
+            <div class="fila-espaciada">
+                <h2 class="texto-subtitulo">Catalogo de servicios veterinarios y tarifas</h2>
+                <a class="btn-primario" href="registrar-servicio.html">+ Nuevo servicio</a>
+            </div>
+            
+            <section class="contenedor-tarjeta">
+                <form class="fila-flexible">
+                    <input type="search" placeholder="Buscar servicios">
+                    <button type="submit" class="btn-secundario">Buscar</button>
+                </form>
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Catalogo de servicios clinicos</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Precio (USD)</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Consulta general</td>
+                                <td>Evaluacion clinica basica y diagnostico inicial</td>
+                                <td>25.00</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-servicio.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-servicio">Eliminar</button>
+                                </td>
+                            </tr>
+                                <tr>
+                                <td>Desparasitación</td>
+                                <td>Administracion de antiparasitario interno o externo</td>
+                                <td>18.00</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-servicio.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-servicio">Eliminar</button>
+                                </td>
+                            </tr>
+                                <tr>
+                                <td>Baño medicado</td>
+                                <td>Higiene dermatológica con shampoo terapéutico</td>
+                                <td>22.00</td>
+                                <td class="fila-flexible">
+                                    <a class="enlace" href="editar-servicio.html">Editar</a>
+                                    <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-servicio">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="fila-espaciada">
+        <p class="texto-parrafo">VetCare · Clínica Veterinaria Huellitas · Quito</p>
+        <p class="texto-subtitulo">&copy; 2026 VetCare. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--Tarjeta Popover-->    
+    <div class="contenedor-tarjeta" id="eliminar-servicio" popover>
+        <h2 class="texto-titulo">¿Dar de baja al servicio?</h2>
+        <p class="texto-parrafo">Esta accion dará de baja al servicio</p>
+        <p class="texto-parrafo">Ingrese el motivo para continuar</p>
+        <form class="columna-flexible" method="get" action="#">
+            <fieldset class="columna-flexible">
+            <legend>Motivo para dar de baja</legend>
+            <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
+            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
+            </fieldset>
+            <div class="fila-espaciada">
+                <button type="button" class="btn-secundario" popovertarget="eliminar-servicio" popovertargetaction="hide">No</button>
+                <button type="submit" class="btn-peligro"> Sí, dar de baja</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
