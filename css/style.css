@@ -119,21 +119,21 @@ main{
 }
 
 .fila-flexible {
-    display: flex; /* Coloca los elementos hijos uno al lado del otro */
-    align-items: center; /* Centra los elementos verticalmente en la fila */
+    display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
 .fila-espaciada {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Empuja el primer elemento a la izquierda y el último a la derecha */
+    justify-content: space-between;
 }
 
 .columna-flexible {
     display: flex;
-    flex-direction: column; /* Apila los elementos uno debajo del otro */
-    gap: 0.5rem; /* Espacio entre los elementos de la columna */
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 /* Botones */
@@ -436,7 +436,7 @@ tbody tr:hover{
 }
 
 [popover]::backdrop {
-    background: rgba(15, 23, 42, 0.45); /*Oscurece el fondo de la pagina*/
+    background: rgba(15, 23, 42, 0.45);
 }
 
 body:has([popover]:popover-open) > :not([popover]) {
@@ -445,7 +445,7 @@ body:has([popover]:popover-open) > :not([popover]) {
 
 textarea {
     max-height: 5.5rem;
-    resize: vertical; /*Evita que  expanadan el textarea hacia los lados en el popover*/
+    resize: vertical;
     margin-bottom: 1rem;
 }
 
@@ -483,7 +483,7 @@ textarea {
     }
 
     .fila-flexible {
-        flex-wrap: wrap; /* Permite que los elementos bajen a otra línea si no caben */
+        flex-wrap: wrap;
     }
 
     .fila-espaciada {
@@ -552,8 +552,8 @@ textarea {
     }
 
     .fila-espaciada {
-        flex-direction: column; /* Cambia de fila horizontal a columna vertical */
-        align-items: stretch; /* Estira los hijos para que ocupen todo el ancho */
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .fila-flexible {
@@ -571,7 +571,7 @@ textarea {
 
     .enlace,
     .enlace-peligro {
-        display: inline-block; /* Mantiene uno a lado de otro y se puede aplicar bien padding*/
+        display: inline-block;
         padding: 0.45rem 0;
     }
 
@@ -615,7 +615,7 @@ textarea {
         background-color: var(--color-seccion-tabla-hover);
     }
 
-    /* 3. Estados (Badges: Programada, Atendida, Cancelada) */
+    /* 3. Estados */
     .estado {
         display: inline-block;
         padding: 0 0.6rem;
