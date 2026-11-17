@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,13 @@
         </div>
         <div class="fila-flexible">
             <span class="texto-parrafo">Administrador</span>
-            <a class="enlace" href="../index.html">Cerrar Sesion</a>
+            <a class="enlace" href="../index.html">Cerrar sesión</a>
         </div>
     </header>
     <div class="rejilla">
         <aside class="col-2 aside-vertical">
-            <p>Administracion</p>
-            <nav aria-label="Menu Principal">
+            <p>Administración</p>
+            <nav aria-label="Menú Principal">
             <ul>
                 <li><a href="gestion-veterinario.html" aria-current="page">Veterinarios</a></li>
                 <li><a href="catalogo-servicios.html">Servicios</a></li>
@@ -29,16 +29,18 @@
         </aside>
         <main class="col-10">
             <h1 class="texto-titulo">Veterinarios</h1>
-            <div class="fila-espaciada">
-                <p>Gestion del personal veterinario de la clinica</p>
+            <section class="fila-espaciada">
+                <h2 class="texto-subtitulo">Gestión del personal veterinario de la clínica</h2>
                 <a href="registrar-veterinario.html" class="btn-primario">+ Nuevo Veterinario</a>
-            </div>
+            </section>
 
-            <div class="contenedor-tarjeta">
-                <form class="fila-flexible">
-                    <input type="text" placeholder="Buscar por nombre o especialidad">
-                    <button type="submit"  class="btn-secundario">Buscar</button>
-            
+            <article class="contenedor-tarjeta">
+                <form method="get" action="gestion-veterinario.html">
+                    <fieldset class="fila-flexible">
+                        <label class="texto-etiqueta" for="buscar-veterinario"></label>
+                        <input id="buscar-veterinario" name="q" type="search" placeholder="Buscar por nombre o especialidad">
+                        <button type="submit" class="btn-secundario">Buscar</button>
+                    </fieldset>
                 </form>
                 <div class="tabla-responsive">
                     <table>
@@ -67,7 +69,6 @@
                                     <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-veterinario">Eliminar</button>
                                 </td>
                             </tr>
-                            </tr> 
                             <tr>
                                 <td>1718877665</td>
                                 <td>Dr. Mateo Ríos</td>
@@ -79,7 +80,6 @@
                                     <a href="editar-veterinario.html" class="enlace">Editar</a>
                                     <button class="enlace-peligro btn-popover" type="button" popovertarget="eliminar-veterinario">Eliminar</button>
                                 </td>
-                            </tr>
                             </tr>
                             <tr>
                                 <td>1724455661</td>
@@ -96,8 +96,7 @@
                         </tbody>
                     </table>
                 </div>
-
-            </div>
+            </article>
         </main>
     </div>
     <footer class="fila-espaciada">
@@ -114,7 +113,7 @@
             <fieldset class="columna-flexible">
             <legend>Motivo para dar de baja</legend>
             <label class="texto-etiqueta" for="motivo-baja">Motivo*</label>
-            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Solicitud del propietario (máx. 200 caracteres)..."></textarea>
+            <textarea name="motivo-baja" id="motivo-baja" required minlength="2" maxlength="200" placeholder="Ej: Renuncia o cambio de horario (máx. 200 caracteres)..."></textarea>
             </fieldset>
             <div class="fila-espaciada">
                 <button type="button" class="btn-secundario" popovertarget="eliminar-veterinario" popovertargetaction="hide">No</button>
