@@ -48,7 +48,10 @@
                                 <label for="propietario" class="texto-etiqueta">Propietario *</label>
                                 <select id="propietario" name="propietario" required>
                                     <option value="" disabled>Seleccione un propietario</option>
-                                    <option value="1" selected>Carlos Mendoza</option> 
+                                    <option value="1712345678" selected>Carlos Mendoza — 1712345678</option>
+                                    <option value="1723456789">Ana Paredes — 1723456789</option>
+                                    <option value="1709876543">Roberto Gómez — 1709876543</option>
+                                    <option value="1715678901">Patricia Torres — 1715678901</option>
                                 </select>
                             </div>
 
@@ -56,7 +59,10 @@
                                 <label for="mascota" class="texto-etiqueta">Mascota *</label>
                                 <select id="mascota" name="mascota" required>
                                     <option value="" disabled>Seleccione una mascota</option>
-                                    <option value="1" selected>Toby</option>
+                                    <option value="toby" selected>Toby (Perro)</option>
+                                    <option value="luna">Luna (Gato)</option>
+                                    <option value="max">Max (Perro)</option>
+                                    <option value="misi">Misi (Gato)</option>
                                 </select>
                             </div>
                         </div>
@@ -66,7 +72,9 @@
                                 <label for="servicio" class="texto-etiqueta">Servicio *</label>
                                 <select id="servicio" name="servicio" required>
                                     <option value="" disabled>Seleccione un servicio</option>
-                                    <option value="consulta" selected>Consulta general</option>
+                                    <option value="consulta-general" selected>Consulta general ($25.00)</option>
+                                    <option value="desparasitacion">Desparasitación ($18.00)</option>
+                                    <option value="bano-medicado">Baño medicado ($22.00)</option>
                                 </select>
                             </div>
 
@@ -74,7 +82,9 @@
                                 <label for="veterinario" class="texto-etiqueta">Veterinario *</label>
                                 <select id="veterinario" name="veterinario" required>
                                     <option value="" disabled>Seleccione un veterinario</option>
-                                    <option value="valeria" selected>Dra. Valeria Gómez</option>
+                                    <option value="valeria" selected>Dra. Valeria Gómez — Medicina general</option>
+                                    <option value="mateo">Dr. Mateo Ríos — Cirugía</option>
+                                    <option value="sofia">Dra. Sofía Andrade — Dermatología</option>
                                 </select>
                             </div>
                         </div>
@@ -88,7 +98,7 @@
                         <div class="fila-flexible">
                             <div class="columna-flexible">
                                 <label for="fecha" class="texto-etiqueta">Fecha *</label>
-                                <input id="fecha" name="fecha" type="date" value="2026-11-12" required min="2026-11-15">
+                                <input id="fecha" name="fecha" type="date" value="2026-11-25" required min="2026-11-17">
                                 <small>Atención de lunes a sábado (no fechas pasadas).</small>
                             </div>
 

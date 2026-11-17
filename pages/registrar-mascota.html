@@ -51,7 +51,7 @@
                                         <option value="perro">Perro</option>
                                         <option value="gato">Gato</option>
                                         <option value="ave">Ave</option>
-                                        <option value="conejo">Conejo</option>
+                                        <option value="roedor">Roedor</option>
                                         <option value="otro">Otro</option>
                                     </select>
                                 </div>
@@ -60,7 +60,15 @@
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="raza" class="texto-etiqueta">Raza</label>
-                                    <input id="raza" name="raza" type="text" maxlength="50" placeholder="Ej: Golden Retriever">
+                                    <input id="raza" name="raza" type="text" list="razas-comunes" maxlength="50" placeholder="Ej: Golden Retriever">
+                                    <datalist id="razas-comunes">
+                                        <option value="Golden Retriever"></option>
+                                        <option value="Labrador Retriever"></option>
+                                        <option value="Schnauzer"></option>
+                                        <option value="Mestizo"></option>
+                                        <option value="Siamés"></option>
+                                        <option value="Persa"></option>
+                                    </datalist>
                                 </div>
 
                                 <div class="columna-flexible">
@@ -79,7 +87,7 @@
                             <div class="fila-flexible">
                                 <div class="columna-flexible">
                                     <label for="fecha-nacimiento" class="texto-etiqueta">Fecha de nacimiento</label>
-                                    <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" max="2026-11-15">
+                                    <input id="fecha-nacimiento" name="fecha-nacimiento" type="date" max="2026-11-18">
                                     <small>No puede ser posterior a la fecha actual.</small>
                                 </div>
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
     /* Fondos y bordes */
     --color-fondo-principal: hsl(220, 20%, 97%);
@@ -32,7 +34,7 @@
     --color-estado-cancelado-texto: hsl(0, 74%, 42%);
 
     /* Tipografía */
-    --fuente-principal: system-ui, -apple-system, sans-serif;
+    --fuente-principal: 'Inter', system-ui, -apple-system, sans-serif;
     --letra-titulo: 1.5rem;
     --letra-subtitulo: 0.95rem;
     --letra-base: 0.875rem;
@@ -644,25 +646,29 @@ textarea {
 
 }
 
-    .imagen-mascota {
-        display: block;
-        width: 10rem;
-        height: 10rem;
-        margin: 0 auto 1.5rem;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid var(--color-borde);
-        background-color: var(--color-fondo-activo);
-    }
+.imagen-mascota {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-fondo-activo);
+}
 
-    .imagen-mascota-mini {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid var(--color-borde);
-        background-color: var(--color-fondo-activo);
-    }
+.imagen-mascota-mini {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-fondo-activo);
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
 
 
 
