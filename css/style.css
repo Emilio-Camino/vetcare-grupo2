@@ -1,41 +1,142 @@
-/* 1. Agregar dentro de :root */
 :root {
+    /* Fondos y bordes */
+    --color-fondo-principal: hsl(220, 20%, 97%);
+    --color-fondo-secundario: hsl(0, 0%, 100%);
+    --color-fondo-activo: hsl(214, 95%, 95%);
+    --color-borde: hsl(220, 13%, 91%);
+
+    /* Textos */
+    --color-titulo: hsl(222, 47%, 11%);
+    --color-principal-letra: hsl(215, 16%, 35%);
+    --color-texto-secundario: hsl(215, 16%, 55%);
+    --color-texto-boton: hsl(0, 0%, 100%);
+    --color-borde-tabla: hsl(0, 0%, 85%);
+    --color-seccion-tabla-par: hsl(210, 40%, 98%);
+    --color-seccion-tabla-hover: hsl(210, 40%, 96%);
+
+    /* Marca, botones y enlaces */
+    --color-primario: hsl(217, 91%, 53%);
+    --color-enlaces: hsl(217, 91%, 48%);
+    --color-accion-peligro: hsl(0, 84%, 45%);
+
     --color-primario-hover: hsl(217, 91%, 45%);
     --color-secundario-hover: hsl(220, 20%, 94%);
     --color-accion-peligro-hover: hsl(0, 84%, 38%);
+
+    /* Estados (Badges) */
+    --color-estado-pendiente-bg: hsl(48, 96%, 89%);
+    --color-estado-pendiente-texto: hsl(32, 95%, 35%);
+    --color-estado-completado-bg: hsl(142, 76%, 90%);
+    --color-estado-completado-texto: hsl(142, 76%, 30%);
+    --color-estado-cancelado-bg: hsl(0, 93%, 94%);
+    --color-estado-cancelado-texto: hsl(0, 74%, 42%);
+
+    /* Tipografía */
+    --fuente-principal: system-ui, -apple-system, sans-serif;
+    --letra-titulo: 1.5rem;
+    --letra-subtitulo: 0.95rem;
+    --letra-base: 0.875rem;
+    --letra-boton: 0.85rem;
+    --letra-pequena: 0.75rem;
+
+    --peso-normal: 400;
+    --peso-medio: 500;
+    --peso-semi: 600;
+    --peso-bold: 700;
+
+    /* Layout y bordes */
     --radio-recto: 0rem;
+    --radio-contenedor: 0.6rem;
+    --radio-boton: 0.3rem;
+    --padding-tabla: 1rem 1rem 1rem 0rem;
+    --padding-tabla-responsive: 0 2rem 0 0rem;
+    --borde-inferior-tabla: 1px solid var(--color-borde); 
 }
 
-/* 2. Agregar en Generales (junto a body) */
-* {
+/* Generales */
+*{
     box-sizing: border-box;
     margin: 0;
 }
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-principal);
+    color: var(--color-principal-letra);
+    font-size: var(--letra-base);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-main {
+main{
     width: 100%;
     margin: 0 auto;
     padding: 2rem;
     gap: 1.5rem;
 }
 
-/* 3. Agregar en Tipografía */
-.texto-marca {
+/* Tipografia */
+
+.texto-marca{
     font-size: var(--letra-subtitulo);
     font-weight: var(--peso-bold);
     color: var(--color-titulo);
 }
 
-/* 4. Agregar en Flex (.fila-flexible con gap) y Botones */
+.texto-titulo {
+    font-size: var(--letra-titulo);
+    font-weight: var(--peso-bold);
+    color: var(--color-titulo);
+}
+
+.texto-subtitulo {
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-normal);
+    color: var(--color-texto-secundario);
+}
+
+.texto-parrafo {
+    font-size: var(--letra-base);
+    font-weight: var(--peso-normal);
+    color: var(--color-principal-letra);
+}
+
+.texto-etiqueta {
+    font-size: var(--letra-pequena);
+    font-weight: var(--peso-semi);
+    color: var(--color-texto-secundario);
+}
+
+/* Flex */
+.contenedor-tarjeta {
+    background-color: var(--color-fondo-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-contenedor);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
 .fila-flexible {
-    display: flex;
-    align-items: center;
+    display: flex; /* Coloca los elementos hijos uno al lado del otro */
+    align-items: center; /* Centra los elementos verticalmente en la fila */
     gap: 1rem;
 }
 
-.btn-primario,
-.btn-secundario,
-.btn-peligro {
+.fila-espaciada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Empuja el primer elemento a la izquierda y el último a la derecha */
+}
+
+.columna-flexible {
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno debajo del otro */
+    gap: 0.5rem; /* Espacio entre los elementos de la columna */
+}
+
+/* Botones */
+
+.btn-primario, .btn-secundario, .btn-peligro{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +147,7 @@ main {
     font-weight: var(--peso-semi);
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.15s ease, transform 0.1s ease;
+    transition: transform 0.1s;
 }
 
 .btn-primario {
@@ -58,11 +159,6 @@ main {
     background-color: var(--color-fondo-secundario);
     color: var(--color-principal-letra);
     border-color: var(--color-borde);
-}
-
-.btn-peligro {
-    background-color: var(--color-accion-peligro);
-    color: var(--color-texto-boton);
 }
 
 .btn-primario:hover {
@@ -77,10 +173,30 @@ main {
     background-color: var(--color-accion-peligro-hover);
 }
 
+.btn-popover{
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+}
+
+.btn-peligro{
+    background-color: var(--color-accion-peligro);
+    color: var(--color-texto-boton);
+}
+
+/* Efecto click */
 .btn-primario:active,
 .btn-secundario:active,
 .btn-peligro:active {
     transform: translateY(1px);
+}
+
+/* Borde en click */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
 }
 
 a:focus-visible,
@@ -89,7 +205,33 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
-/* 5. Header y Barra de Navegación Vertical */
+
+.enlace {
+    font-size: var(--letra-base);
+    font-weight: var(--peso-medio);
+    color: var(--color-enlaces);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.enlace:hover {
+    text-decoration: underline;
+}
+
+.enlace-peligro {
+    font-size: var(--letra-base);
+    font-weight: var(--peso-medio);
+    color: var(--color-accion-peligro);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.enlace-peligro:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+
 header {
     background-color: var(--color-fondo-secundario);
     border: 1px solid var(--color-borde);
@@ -97,14 +239,22 @@ header {
     padding: 1.5rem;
 }
 
-.aside-vertical {
-    display: grid;
+/* Barra de Navegacion Vertical */
+
+.aside-vertical{
+    align-content:flex-start;
     background-color: var(--color-fondo-secundario);
-    border: 1px solid var(--color-borde);
+    border-right: 1px solid var(--color-borde);
     border-radius: var(--radio-recto);
     padding: 1.5rem;
+    border-top: none;
 }
 
+.aside-vertical p{
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+
+}
 .aside-vertical ul {
     list-style: none;
     padding: 0;
@@ -129,3 +279,387 @@ header {
     color: var(--color-primario);
     font-weight: var(--peso-semi);
 }
+
+/*Footer*/
+footer {
+    background-color: var(--color-fondo-secundario);
+    border-top: 1px solid var(--color-borde);
+    padding: 1rem 1.5rem;
+}
+/*Formularios*/
+
+form{
+    padding-bottom: 0.75rem;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+legend {
+    width: 100%;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-borde);
+    font-size: var(--letra-subtitulo);
+    font-weight: var(--peso-semi);
+    color: var(--color-titulo);
+}
+
+/*Tomen en cuenta esto, con not podemos excluir a radio y checkbox y asi ahorramos lineas*/
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-boton);
+    font-family: inherit;
+}
+
+/*Aca le ponemos a radio y checkbox*/
+input[type="radio"],
+input[type="checkbox"] {
+    margin-top: 1rem;
+    accent-color: var(--color-primario);
+    cursor: pointer;
+}
+
+
+/* Focus */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+/* Obligatorio */
+input:required,
+select:required,
+textarea:required {
+    border-left: 3px solid var(--color-primario);
+}
+
+/* Valido */
+input:valid:not(:placeholder-shown),
+select:valid,
+textarea:valid:not(:placeholder-shown) {
+    border-color: var(--color-estado-completado-texto);
+}
+
+/* Invalido */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid,
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--color-accion-peligro);
+}
+
+/*Para espaciar elementos horizontales en los formularios*/
+form .fila-flexible > .columna-flexible {
+    flex: 1;
+}
+
+/* Tablas */
+
+table{
+    width: 100% ;
+    border-collapse:collapse;
+    text-align: justify;
+    
+}
+
+caption{
+    text-align: justify;
+    color: var(--color-texto-secundario);
+    font-weight: var(--peso-normal);
+    padding-bottom: 0.01rem;
+    margin: 1rem 0;
+}
+
+thead th{
+    padding: var(--padding-tabla);
+    text-transform: uppercase;
+    border-bottom: var(--borde-inferior-tabla);
+    font-weight: var(--peso-semi);
+
+}
+tbody td{
+    padding: var(--padding-tabla);
+    font-weight: var(--peso-normal);
+    border-bottom: var(--borde-inferior-tabla);
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--color-seccion-tabla-par);
+}
+tbody tr:hover{
+    background-color: var(--color-seccion-tabla-hover);
+}
+
+/* Estados (Citas por ejemplo: Atentida, Cancelada, etc)*/
+.estado {
+    display: inline-block;
+    padding: 0 0.6rem;
+    border-radius: 999px;
+    font-size: var(--letra-pequena);
+    font-weight: var(--peso-semi);
+}
+.estado-pendiente {
+    background-color: var(--color-estado-pendiente-bg);
+    color: var(--color-estado-pendiente-texto);
+}
+.estado-atendida {
+    background-color: var(--color-estado-completado-bg);
+    color: var(--color-estado-completado-texto);
+}
+.estado-cancelada {
+    background-color: var(--color-estado-cancelado-bg);
+    color: var(--color-estado-cancelado-texto);
+}
+
+/*Popover de cancelar*/
+
+[popover] {
+    margin: auto;
+    padding: 1.5rem;
+    width: min(92vw, 420px);
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-principal-letra);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-contenedor);
+}
+
+[popover]::backdrop {
+    background: rgba(15, 23, 42, 0.45); /*Oscurece el fondo de la pagina*/
+}
+
+body:has([popover]:popover-open) > :not([popover]) {
+    pointer-events: none;
+}
+
+textarea {
+    max-height: 5.5rem;
+    resize: vertical; /*Evita que  expanadan el textarea hacia los lados en el popover*/
+    margin-bottom: 1rem;
+}
+
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+    flex: 1;
+}
+
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-6  { grid-column: span 6; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-12 { grid-column: span 12; }
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .contenedor-tarjeta {
+        padding: 1.25rem;
+    }
+
+    .texto-titulo {
+        font-size: 1.35rem;
+    }
+
+    .fila-flexible {
+        flex-wrap: wrap; /* Permite que los elementos bajen a otra línea si no caben */
+    }
+
+    .fila-espaciada {
+        flex-wrap: wrap;
+    }
+        /* 2. Tablas */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: justify;
+    }
+
+    caption {
+        text-align: justify;
+        color: var(--color-texto-secundario);
+        font-weight: var(--peso-normal);
+        padding: 1rem 0;
+    }
+
+    thead th {
+        padding: var(--padding-tabla-responsive);
+        text-transform: uppercase;
+        border-bottom: var(--borde-inferior-tabla);
+        font-weight: var(--peso-semi);
+    }
+
+    tbody td {
+        text-align: left;
+        padding: var(--padding-tabla);
+        font-weight: var(--peso-normal);
+        border-bottom: var(--borde-inferior-tabla);
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: var(--color-seccion-tabla-par);
+    
+    }
+
+    tbody tr:hover {
+        background-color: var(--color-seccion-tabla-hover);
+    }
+    .estado {
+        margin: 0 0.5rem;
+    }
+    .col-2  { grid-column: span 3; }
+    .col-10 { grid-column: span 9; }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    .contenedor-tarjeta {
+        padding: 1rem;
+        border-radius: 0.45rem;
+    }
+
+    .texto-titulo {
+        font-size: 1.2rem;
+    }
+
+    .texto-subtitulo {
+        font-size: 0.875rem;
+    }
+
+    .fila-espaciada {
+        flex-direction: column; /* Cambia de fila horizontal a columna vertical */
+        align-items: stretch; /* Estira los hijos para que ocupen todo el ancho */
+    }
+
+    .fila-flexible {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        width: 100%;
+        padding: 0.65rem 1rem;
+        text-align: center;
+    }
+
+    .enlace,
+    .enlace-peligro {
+        display: inline-block; /* Mantiene uno a lado de otro y se puede aplicar bien padding*/
+        padding: 0.45rem 0;
+    }
+
+    /* 2. Tablas */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: justify;
+    }
+
+    caption {
+        text-align: justify;
+        color: var(--color-texto-secundario);
+        font-weight: var(--peso-normal);
+        padding: 1rem 0;
+    }
+
+    thead th {
+        padding: var(--padding-tabla-responsive);
+        text-transform: uppercase;
+        border-bottom: var(--borde-inferior-tabla);
+        font-weight: var(--peso-semi);
+    }
+
+    tbody td {
+        text-align: left;
+        padding: var(--padding-tabla);
+        font-weight: var(--peso-normal);
+        border-bottom: var(--borde-inferior-tabla);
+    }
+    td.fila-flexible{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    tbody tr:nth-child(even) {
+        background-color: var(--color-seccion-tabla-par);
+    }
+
+    tbody tr:hover {
+        background-color: var(--color-seccion-tabla-hover);
+    }
+
+    /* 3. Estados (Badges: Programada, Atendida, Cancelada) */
+    .estado {
+        display: inline-block;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        font-size: var(--letra-pequena);
+        font-weight: var(--peso-semi);
+        margin: 0 0.5rem;
+    }
+
+    .estado-pendiente {
+        background-color: var(--color-estado-pendiente-bg);
+        color: var(--color-estado-pendiente-texto);
+    }
+
+    .estado-atendida {
+        background-color: var(--color-estado-completado-bg);
+        color: var(--color-estado-completado-texto);
+    }
+
+    .estado-cancelada {
+        background-color: var(--color-estado-cancelado-bg);
+        color: var(--color-estado-cancelado-texto);
+    }
+    
+    .col-1, .col-2, .col-3, .col-4, .col-6, .col-8, .col-9, .col-10 {
+        grid-column: 1 / -1;
+    }
+
+}
+
+    .imagen-mascota {
+        display: block;
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--color-borde);
+        background-color: var(--color-fondo-activo);
+    }
+
+    .imagen-mascota-mini {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--color-borde);
+        background-color: var(--color-fondo-activo);
+    }
