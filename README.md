@@ -1,5 +1,15 @@
 # VetCare - Clínica Veterinaria Huellitas
 
+**Sitio desplegado en GitHub Pages:** https://emilio-camino.github.io/vetcare-grupo2/
+
+## Integrantes del Grupo 2
+
+- Mateo Aguirre
+- Adrian Camino
+- Gissel Dávila
+- Karen Mosquera
+
+# Descripción
 VetCare es un sistema web pensado para organizar la atención diaria de la Clínica Veterinaria Huellitas. Con esta aplicación se llevan en orden las citas médicas, los datos de los propietarios, el registro de sus mascotas, los historiales clínicos, el registro de los veterinarios y el catálogo de servicios.
 
 Para construir este proyecto se usó HTML y CSS.
@@ -28,12 +38,17 @@ Pantallas que le pertenecen:
 - `listado-citas.html`
 - `agendar-cita.html`
 - `reprogramar-cita.html`
+- `cancelar-cita`
 - `listado-propietarios.html`
 - `registrar-propietario.html`
 - `editar-propietario.html`
+- `eliminar-propietario`
 - `listado-mascotas.html`
 - `registrar-mascota.html`
 - `editar-mascota.html`
+- `eliminar-mascota`
+
+Las pantallas que no llevan extensión `.html` son ventanas emergentes de confirmación integradas dentro de sus respectivos listados.
 
 Capacidades: consultar y buscar citas registradas, agendar nuevas citas médicas, reprogramar citas existentes y cancelarlas indicando un motivo. También puede consultar, buscar, registrar, editar y dar de baja tanto a los propietarios como a las mascotas de la clínica, además de cerrar sesión desde el encabezado superior.
 
@@ -54,15 +69,25 @@ Pantallas que le pertenecen:
 - `gestion-veterinario.html`
 - `registrar-veterinario.html`
 - `editar-veterinario.html`
+- `eliminar-veterinario`
 - `catalogo-servicios.html`
 - `registrar-servicio.html`
 - `editar-servicio.html`
+- `eliminar-servicio`
+
+Las pantallas que no llevan extensión `.html` son ventanas emergentes de confirmación integradas dentro de sus respectivos listados.
 
 Capacidades: consultar, buscar, registrar, editar y dar de baja a los veterinarios de la clínica, así como consultar, buscar, registrar, editar y dar de baja los servicios del catálogo junto con sus precios, además de cerrar sesión desde el encabezado superior.
 
-## Integrantes del Grupo 2
+## Reparto del trabajo
 
-- Mateo Aguirre
-- Adrian Camino
-- Gissel Dávila
-- Karen Mosquera
+### Entregables en PDF (3.1 – 3.5)
+
+Todos los documentos fueron elaborados y revisados inicialmente en conjunto por el equipo. La subida del PDF al repositorio estuvo a cargo de Adrian Camino.
+
+### Pantallas implementadas en HTML5 y CSS (3.6)
+
+- **Adrian Camino** — *Login y Propietarios:* `index.html`, `listado-propietarios.html`, `registrar-propietario.html`, `editar-propietario.html`
+- **Karen Mosquera** — *Mascotas y Atención:* `listado-mascotas.html`, `registrar-mascota.html`, `editar-mascota.html`, `registrar-atencion-medica.html`, `historial-clinico.html`
+- **Gissel Dávila** — *Citas y Agenda:* `listado-citas.html` (con sus popovers), `agendar-cita.html`, `reprogramar-cita.html`, `agenda-medica.html`
+- **Mateo Aguirre** — *Administrador:* `gestion-veterinario.html`, `registrar-veterinario.html`, `editar-veterinario.html`, `catalogo-servicios.html`, `registrar-servicio.html`, `editar-servicio.html`
